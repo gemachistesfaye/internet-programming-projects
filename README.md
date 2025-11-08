@@ -24,3 +24,4 @@ A consolidated collection of Internet Programming (IP) coursework, frontend labs
 - **Languages:** HTML5, CSS3, JavaScript
 - **Backend:** Node.js / PHP / Python
 - **Tools:** Git, VS Code
+
