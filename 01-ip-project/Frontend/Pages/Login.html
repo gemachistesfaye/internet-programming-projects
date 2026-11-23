@@ -3,146 +3,109 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portal Sign In | URJIKO Learning Management</title>
+  <title>Student Portal Login | Haramaya University</title>
   <link rel="stylesheet" href="../CSS/style1.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    .login-container {
+      max-width: 420px;
+      margin: 50px auto;
+      background-color: #ffffff;
+      border: 1px solid #d1d5db;
+      border-radius: 6px;
+      padding: 30px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    }
+    .login-logo {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .login-logo img {
+      height: 65px;
+    }
+    .login-logo h2 {
+      font-size: 18px;
+      color: #0d5c3a;
+      margin-top: 10px;
+    }
+    .login-logo p {
+      font-size: 12px;
+      color: #6b7280;
+    }
+    .demo-info {
+      background-color: #f3f4f6;
+      border: 1px dashed #cbd5e1;
+      padding: 10px;
+      border-radius: 4px;
+      margin-top: 20px;
+      font-size: 12px;
+      color: #4b5563;
+    }
+  </style>
 </head>
-<body class="auth-body">
+<body>
 
-  <div class="auth-wrapper">
-    <!-- Brand / Return Header -->
-    <div class="auth-nav">
-      <a href="landing_page.html" class="auth-back">
-        <i class="fa-solid fa-arrow-left"></i> Back to Home
-      </a>
-      <a href="landing_page.html" class="auth-logo">
-        <i class="fa-solid fa-graduation-cap"></i> URJIKO <span>LMS</span>
-      </a>
+  <!-- University Header -->
+  <header class="portal-header">
+    <div class="header-container">
+      <div class="header-brand">
+        <img src="../Images/haramaya-logo-1.png" alt="Haramaya University Logo" class="header-logo">
+        <div class="header-title">
+          <h1>HARAMAYA UNIVERSITY</h1>
+          <p>Student Information Management System (SIMS)</p>
+        </div>
+      </div>
+      <div class="header-nav">
+        <a href="landing_page.html">Home</a>
+        <a href="Index.html">Student Portal</a>
+        <a href="register_student.html">Registration</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="login-container">
+    <div class="login-logo">
+      <img src="../Images/haramaya-logo-1.png" alt="HU">
+      <h2>SIMS Portal Authentication</h2>
+      <p>Enter your student or staff credentials</p>
     </div>
 
-    <!-- Login Card -->
-    <div class="auth-card">
-      <div class="auth-header">
-        <div class="auth-icon-bubble">
-          <i class="fa-solid fa-lock"></i>
-        </div>
-        <h2>Welcome Back</h2>
-        <p>Access your training coursework, labs, and academic records</p>
+    <form onsubmit="event.preventDefault(); window.location.href='Index.html';">
+      <div class="form-group">
+        <label for="studentId">Student ID or Username:</label>
+        <input type="text" id="studentId" value="1381/16" required>
       </div>
 
-      <!-- Role Selector -->
-      <div class="role-selector" id="roleSelector">
-        <button type="button" class="role-btn active" data-role="student">
-          <i class="fa-solid fa-user-graduate"></i> Student
-        </button>
-        <button type="button" class="role-btn" data-role="instructor">
-          <i class="fa-solid fa-chalkboard-user"></i> Instructor
-        </button>
-        <button type="button" class="role-btn" data-role="admin">
-          <i class="fa-solid fa-shield-halved"></i> Admin
-        </button>
+      <div class="form-group">
+        <label for="password">Portal Password:</label>
+        <input type="password" id="password" value="••••••••••••" required>
       </div>
 
-      <form class="auth-form" id="loginForm" onsubmit="handleLogin(event)">
-        <div class="form-group">
-          <label for="credential">Student ID or Email</label>
-          <div class="input-with-icon">
-            <i class="fa-solid fa-envelope"></i>
-            <input type="text" id="credential" placeholder="e.g. 1381/16 or student@haramaya.edu.et" value="1381/16" required>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <div class="form-label-row">
-            <label for="password">Password</label>
-            <a href="#" class="forgot-link" onclick="alert('Password reset link sent to registered student email.')">Forgot?</a>
-          </div>
-          <div class="input-with-icon">
-            <i class="fa-solid fa-key"></i>
-            <input type="password" id="password" value="••••••••••••" placeholder="Enter your portal password" required>
-            <button type="button" class="toggle-password" onclick="togglePasswordVisibility()">
-              <i class="fa-solid fa-eye" id="toggleEye"></i>
-            </button>
-          </div>
-        </div>
-
-        <div class="form-options">
-          <label class="remember-checkbox">
-            <input type="checkbox" checked>
-            <span>Keep me signed in</span>
-          </label>
-        </div>
-
-        <button type="submit" class="btn btn-primary btn-block">
-          <span>Sign In to Dashboard</span>
-          <i class="fa-solid fa-arrow-right"></i>
-        </button>
-
-        <!-- Quick Demo Credentials Box -->
-        <div class="demo-account-box">
-          <div class="demo-title">
-            <i class="fa-solid fa-wand-magic-sparkles"></i> <strong>Quick Demo Access</strong>
-          </div>
-          <p>Click below to prefill test credentials and enter the student dashboard immediately.</p>
-          <button type="button" class="btn btn-outline btn-sm" onclick="fillDemoAndEnter()">
-            Launch Student Demo (Gemachis T.)
-          </button>
-        </div>
-      </form>
-
-      <div class="auth-footer">
-        <p>New student? <a href="register_student.html">Complete Registration</a></p>
+      <div class="form-group" style="display: flex; justify-content: space-between; font-size: 12px;">
+        <label style="font-weight: normal; cursor: pointer;">
+          <input type="checkbox" checked> Remember me
+        </label>
+        <a href="#" onclick="alert('Please contact the campus registrar office.');">Forgot Password?</a>
       </div>
+
+      <button type="submit" class="btn btn-primary" style="width: 100%; padding: 10px;">
+        Sign In to Portal
+      </button>
+
+      <div class="demo-info">
+        <strong>Demo Account:</strong><br>
+        ID: <code>1381/16</code> &bull; Password: <code>DemoPass</code><br>
+        Click "Sign In" to open the student dashboard directly.
+      </div>
+    </form>
+
+    <div style="margin-top: 20px; text-align: center; font-size: 13px;">
+      Need to register? <a href="register_student.html">Course Registration Form</a>
     </div>
   </div>
 
-  <script>
-    // Role selection toggle
-    document.querySelectorAll('.role-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        document.querySelectorAll('.role-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        const role = btn.getAttribute('data-role');
-        const cred = document.getElementById('credential');
-        if (role === 'instructor') {
-          cred.value = 'ins.tesfaye@haramaya.edu.et';
-        } else if (role === 'admin') {
-          cred.value = 'admin@urjiko.edu.et';
-        } else {
-          cred.value = '1381/16';
-        }
-      });
-    });
+  <footer class="portal-footer">
+    <p>&copy; 2026 Haramaya University &bull; Department of Information Science</p>
+  </footer>
 
-    function togglePasswordVisibility() {
-      const input = document.getElementById('password');
-      const eye = document.getElementById('toggleEye');
-      if (input.type === 'password') {
-        input.type = 'text';
-        eye.classList.remove('fa-eye');
-        eye.classList.add('fa-eye-slash');
-      } else {
-        input.type = 'password';
-        eye.classList.remove('fa-eye-slash');
-        eye.classList.add('fa-eye');
-      }
-    }
-
-    function handleLogin(e) {
-      e.preventDefault();
-      const btn = e.target.querySelector('button[type="submit"]');
-      btn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> Authenticating...';
-      btn.disabled = true;
-      setTimeout(() => {
-        window.location.href = 'Index.html';
-      }, 700);
-    }
-
-    function fillDemoAndEnter() {
-      document.getElementById('credential').value = '1381/16';
-      document.getElementById('password').value = 'DemoStudent2026';
-      window.location.href = 'Index.html';
-    }
-  </script>
 </body>
 </html>

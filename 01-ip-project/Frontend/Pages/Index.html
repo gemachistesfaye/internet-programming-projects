@@ -3,184 +3,304 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Student Portal Dashboard | URJIKO Labs</title>
+  <title>Student Portal | Haramaya University</title>
   <link rel="stylesheet" href="../CSS/style1.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
-  <div class="portal-wrapper">
-
-    <!-- Top Header -->
-    <header class="portal-header">
-      <div class="portal-brand">
-        <div class="portal-logo-icon">
-          <i class="fa-solid fa-graduation-cap"></i>
-        </div>
-        <div class="portal-title">
-          <h2>URJIKO Training Portal</h2>
-          <span>Student Learning Management</span>
+  <!-- University Header -->
+  <header class="portal-header">
+    <div class="header-container">
+      <div class="header-brand">
+        <img src="../Images/haramaya-logo-1.png" alt="Haramaya University Logo" class="header-logo">
+        <div class="header-title">
+          <h1>HARAMAYA UNIVERSITY</h1>
+          <p>Student Information Management System (SIMS)</p>
         </div>
       </div>
+      <div class="header-nav">
+        <a href="landing_page.html">Home</a>
+        <a href="Index.html" class="active">Student Portal</a>
+        <a href="register_student.html">Course Registration</a>
+        <a href="Login.html" class="btn-signout">Sign Out</a>
+      </div>
+    </div>
+  </header>
 
-      <div style="display: flex; align-items: center; gap: 1rem;">
-        <a href="landing_page.html" class="btn btn-outline"><i class="fa-solid fa-globe"></i> View Landing Page</a>
-        <div class="student-badge">
-          <div class="avatar">GT</div>
-          <div>
-            <div style="font-weight: 700; font-size: 0.88rem;">Gemachis Tesfaye</div>
-            <div style="font-size: 0.72rem; color: var(--text-muted);">Web Engineering Cohort 2026</div>
+  <!-- Secondary Navigation -->
+  <nav class="sub-nav">
+    <div class="sub-nav-container">
+      <a href="Index.html" class="active">My Dashboard</a>
+      <a href="#registered-courses">Registered Courses</a>
+      <a href="#grades-section">Grades & Records</a>
+      <a href="#class-schedule">Class Schedule</a>
+      <a href="register_student.html">Add / Drop Courses</a>
+      <a href="#media-guides">Lab Resources</a>
+    </div>
+  </nav>
+
+  <!-- Main Container -->
+  <div class="main-wrapper">
+
+    <!-- Student Information Banner -->
+    <section class="student-card">
+      <div class="student-info">
+        <div class="student-avatar">GT</div>
+        <div class="student-details">
+          <h2>Gemachis Tesfaye</h2>
+          <div class="student-meta">
+            <span><strong>Student ID:</strong> 1381/16</span>
+            <span><strong>College:</strong> Computing & Informatics</span>
+            <span><strong>Department:</strong> Information Science</span>
+            <span><strong>Program:</strong> Regular Undergraduate (BSc)</span>
+            <span><strong>Year:</strong> 2nd Year, Semester I</span>
           </div>
         </div>
       </div>
-    </header>
-
-    <!-- Metrics Ribbon -->
-    <section class="metrics-grid">
-      <div class="metric-card">
-        <div class="metric-icon emerald"><i class="fa-solid fa-calendar-check"></i></div>
-        <div class="metric-data">
-          <h4>94.5%</h4>
-          <p>QR Attendance Rate</p>
-        </div>
-      </div>
-
-      <div class="metric-card">
-        <div class="metric-icon indigo"><i class="fa-solid fa-list-check"></i></div>
-        <div class="metric-data">
-          <h4>8 / 10</h4>
-          <p>Tasks Completed</p>
-        </div>
-      </div>
-
-      <div class="metric-card">
-        <div class="metric-icon amber"><i class="fa-solid fa-trophy"></i></div>
-        <div class="metric-data">
-          <h4>92.4 / 100</h4>
-          <p>Current Gradebook Average</p>
-        </div>
-      </div>
-
-      <div class="metric-card">
-        <div class="metric-icon cyan"><i class="fa-solid fa-certificate"></i></div>
-        <div class="metric-data">
-          <h4>On Track</h4>
-          <p>Certificate Status</p>
-        </div>
+      <div>
+        <span class="student-badge">Status: Active & Registered</span>
       </div>
     </section>
 
-    <!-- Main Dashboard Columns -->
-    <div class="dashboard-layout">
+    <!-- Academic KPI Stats -->
+    <section class="stats-row">
+      <div class="stat-item">
+        <div class="stat-num">3.94</div>
+        <div class="stat-lbl">Cumulative GPA (CGPA)</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">64</div>
+        <div class="stat-lbl">Earned ECTS Credits</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">95%</div>
+        <div class="stat-lbl">Lecture & Lab Attendance</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">Dean's List</div>
+        <div class="stat-lbl">Academic Standing</div>
+      </div>
+    </section>
 
-      <!-- Left Column: Tasks and Coursework -->
-      <div>
-        <div class="panel">
-          <div class="panel-header">
-            <h3>Active Practical Assignments</h3>
-            <a href="landing_page.html" class="btn btn-outline" style="font-size: 0.75rem;">View Syllabus</a>
+    <!-- Two-Column Portal Grid -->
+    <div class="portal-grid">
+
+      <!-- Left Column: Courses, Grades, Schedule -->
+      <div class="grid-left">
+
+        <!-- Registered Courses Section -->
+        <div class="box" id="registered-courses">
+          <div class="box-header">
+            <h3>Registered Courses &mdash; 2026/2027 Semester</h3>
+            <a href="register_student.html" style="font-size: 12px; font-weight: bold;">+ Register More</a>
           </div>
-
-          <div class="task-list">
-            <div class="task-item">
-              <div class="task-info">
-                <h5>Task 08: Responsive CSS Grid & Media Queries</h5>
-                <p>Internet Programming Lab &bull; Due Tomorrow at 11:59 PM</p>
-              </div>
-              <span class="pill-status pill-pending">Pending Review</span>
-            </div>
-
-            <div class="task-item">
-              <div class="task-info">
-                <h5>Task 07: Client-side Form Validation & JavaScript</h5>
-                <p>Internet Programming Lab &bull; Graded: 96 / 100</p>
-              </div>
-              <span class="pill-status pill-success">Completed</span>
-            </div>
-
-            <div class="task-item">
-              <div class="task-info">
-                <h5>Task 06: Complex HTML5 Semantic Page Layouts</h5>
-                <p>Internet Programming Lab &bull; Graded: 90 / 100</p>
-              </div>
-              <span class="pill-status pill-success">Completed</span>
-            </div>
-
-            <div class="task-item">
-              <div class="task-info">
-                <h5>Task 05: Accessible Data Tables & Navigation Menus</h5>
-                <p>Internet Programming Lab &bull; Graded: 94 / 100</p>
-              </div>
-              <span class="pill-status pill-success">Completed</span>
-            </div>
+          <div class="box-body" style="padding: 0;">
+            <table class="portal-table">
+              <thead>
+                <tr>
+                  <th>Course Code</th>
+                  <th>Course Title</th>
+                  <th>ECTS</th>
+                  <th>Instructor</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>IS-2041</strong></td>
+                  <td>Internet Programming</td>
+                  <td>5</td>
+                  <td>Mr. Gemachis T.</td>
+                  <td><span class="status-enrolled">Enrolled</span></td>
+                </tr>
+                <tr>
+                  <td><strong>CoSc-2031</strong></td>
+                  <td>Data Structures and Algorithms</td>
+                  <td>6</td>
+                  <td>Dr. Abebe K.</td>
+                  <td><span class="status-enrolled">Enrolled</span></td>
+                </tr>
+                <tr>
+                  <td><strong>IS-2022</strong></td>
+                  <td>Database Management Systems</td>
+                  <td>5</td>
+                  <td>Ms. Bontu D.</td>
+                  <td><span class="status-enrolled">Enrolled</span></td>
+                </tr>
+                <tr>
+                  <td><strong>SE-2051</strong></td>
+                  <td>Object Oriented Programming (Java)</td>
+                  <td>5</td>
+                  <td>Mr. Chala G.</td>
+                  <td><span class="status-enrolled">Enrolled</span></td>
+                </tr>
+                <tr>
+                  <td><strong>EnLa-1012</strong></td>
+                  <td>Basic Writing Skills</td>
+                  <td>3</td>
+                  <td>Instructor Kebede</td>
+                  <td><span class="status-enrolled">Enrolled</span></td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
 
-        <!-- Video Guide Player -->
-        <div class="panel">
-          <div class="panel-header">
-            <h3>Course Multimedia & Tutorial Guides</h3>
+        <!-- Gradebook Report -->
+        <div class="box" id="grades-section">
+          <div class="box-header">
+            <h3>Previous Semester Academic Grade Report</h3>
+            <span style="font-size: 12px; color: #6b7280;">Semester GPA: 3.91</span>
           </div>
-          <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">Setup your local development environment using the embedded laboratory video guide:</p>
-          <video controls style="width: 100%; border-radius: 8px; background: #000; max-height: 340px;">
-            <source src="../Video/VmWare%20installation.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
+          <div class="box-body" style="padding: 0;">
+            <table class="portal-table">
+              <thead>
+                <tr>
+                  <th>Course</th>
+                  <th>Credits</th>
+                  <th>Midterm (30%)</th>
+                  <th>Assignment (20%)</th>
+                  <th>Final (50%)</th>
+                  <th>Letter Grade</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Fundamentals of Programming</td>
+                  <td>5</td>
+                  <td>28.5</td>
+                  <td>19.5</td>
+                  <td>48.0</td>
+                  <td><span class="grade-badge">A+</span></td>
+                </tr>
+                <tr>
+                  <td>Introduction to Information Systems</td>
+                  <td>4</td>
+                  <td>27.0</td>
+                  <td>19.0</td>
+                  <td>46.5</td>
+                  <td><span class="grade-badge">A</span></td>
+                </tr>
+                <tr>
+                  <td>Discrete Mathematics for Computing</td>
+                  <td>5</td>
+                  <td>26.5</td>
+                  <td>18.0</td>
+                  <td>45.0</td>
+                  <td><span class="grade-badge">A</span></td>
+                </tr>
+                <tr>
+                  <td>Computer Hardware & Maintenance</td>
+                  <td>4</td>
+                  <td>29.0</td>
+                  <td>20.0</td>
+                  <td>47.5</td>
+                  <td><span class="grade-badge">A+</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
+
+        <!-- Multimedia & Lab Guides -->
+        <div class="box" id="media-guides">
+          <div class="box-header">
+            <h3>Laboratory Video Guide: Development Environment Setup</h3>
+          </div>
+          <div class="box-body media-container">
+            <p style="margin-bottom: 8px; font-size: 13px; color: #4b5563;">
+              Follow the instructions below to configure Visual Studio Code, Git, and the local web development environment:
+            </p>
+            <video controls poster="../Images/111.jpg">
+              <source src="../Video/How_To_Download_and_install_Visual_studio_code_ቪዥዋል_ስቱዲዮ_ኮድን_እን.mp4" type="video/mp4">
+              <source src="../Video/VmWare installation.mp4" type="video/mp4">
+              Your browser does not support the video element.
+            </video>
+          </div>
+        </div>
+
       </div>
 
-      <!-- Right Column: Quick Links & Audio Player -->
-      <div>
-        <!-- Quick Actions -->
-        <div class="panel">
-          <div class="panel-header">
+      <!-- Right Column: Announcements, Deadlines, Campus Notices -->
+      <div class="grid-right">
+
+        <!-- Campus Notices -->
+        <div class="box">
+          <div class="box-header">
+            <h3>University Notices & Announcements</h3>
+          </div>
+          <div class="box-body">
+            <ul class="notice-list">
+              <li class="notice-item">
+                <strong>Mid-Semester Exam Schedule Released</strong>
+                <p>The College of Computing exam timetable is posted. Exams start next Monday across campus halls.</p>
+                <span class="notice-date">Haramaya Registrar &bull; Today</span>
+              </li>
+              <li class="notice-item">
+                <strong>Internet Programming Project Submission</strong>
+                <p>All students must submit Lab Task 08 via the portal or GitHub repository link before Friday.</p>
+                <span class="notice-date">Dept of Information Science &bull; Yesterday</span>
+              </li>
+              <li class="notice-item">
+                <strong>Main Campus Library Weekend Hours</strong>
+                <p>Digital library and computing labs remain open 24/7 during exam revision week.</p>
+                <span class="notice-date">Library Admin &bull; 3 days ago</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="box">
+          <div class="box-header">
             <h3>Quick Actions</h3>
           </div>
-          <div style="display: flex; flex-direction: column; gap: 0.65rem;">
-            <a href="register_student.html" class="btn btn-primary" style="justify-content: center;">
-              <i class="fa-solid fa-file-arrow-up"></i> Submit New Project
-            </a>
-            <a href="Login.html" class="btn btn-outline" style="justify-content: center;">
-              <i class="fa-solid fa-lock"></i> Student Sign In
-            </a>
-            <a href="About.html" class="btn btn-outline" style="justify-content: center;">
-              <i class="fa-solid fa-circle-info"></i> About Program
-            </a>
-            <a href="Contact.html" class="btn btn-outline" style="justify-content: center;">
-              <i class="fa-solid fa-envelope"></i> Contact Mentor
-            </a>
+          <div class="box-body">
+            <p style="margin-bottom: 10px;">
+              <a href="register_student.html" class="btn btn-primary" style="display: block; margin-bottom: 8px;">
+                Student Registration Form
+              </a>
+              <a href="landing_page.html" class="btn btn-secondary" style="display: block; margin-bottom: 8px;">
+                Information Science Homepage
+              </a>
+              <a href="Login.html" class="btn btn-secondary" style="display: block;">
+                Switch Account / Sign In
+              </a>
+            </p>
           </div>
         </div>
 
-        <!-- Audio Player Widget -->
-        <div class="panel">
-          <div class="panel-header">
-            <h3>Laboratory Audio Focus</h3>
+        <!-- Audio Player for Study -->
+        <div class="box">
+          <div class="box-header">
+            <h3>Campus Audio Stream</h3>
           </div>
-          <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 0.75rem;">Cultural music & background focus track:</p>
-          <audio controls style="width: 100%;">
-            <source src="../Audio/Naol_Bula_Soortuu_Qalbii_New_Ethiopian_Afan_Oromo_Music_Vide.m4a" type="audio/mp4">
-            Your browser does not support audio element.
-          </audio>
+          <div class="box-body media-container">
+            <p style="font-size: 12px; color: #6b7280; margin-bottom: 6px;">Naol Bula &bull; Afan Oromo Audio Track</p>
+            <audio controls>
+              <source src="../Audio/Naol_Bula_Soortuu_Qalbii_New_Ethiopian_Afan_Oromo_Music_Vide.m4a" type="audio/mp4">
+              Your browser does not support audio.
+            </audio>
+          </div>
         </div>
 
-        <!-- Cohort Notice -->
-        <div class="panel" style="background: #f0fdf4; border-color: #bbf7d0;">
-          <h4 style="color: #166534; font-size: 0.95rem; font-weight: 700; margin-bottom: 0.4rem;">
-            <i class="fa-solid fa-circle-check"></i> Examination Scheduled
-          </h4>
-          <p style="color: #15803d; font-size: 0.82rem; line-height: 1.5;">Midterm MCQ Online Proctored Exam opens this Friday. Make sure your browser camera is tested.</p>
-        </div>
       </div>
 
     </div>
 
-    <!-- Portal Footer -->
-    <footer style="margin-top: 2rem; text-align: center; color: var(--text-muted); font-size: 0.82rem;">
-      <p>&copy; 2026 URJIKO Labs Training Management Portal. All Rights Reserved.</p>
-    </footer>
-
   </div>
+
+  <!-- University Footer -->
+  <footer class="portal-footer">
+    <p>&copy; 2026 Haramaya University &bull; College of Computing and Informatics &bull; Department of Information Science</p>
+    <p style="margin-top: 6px;">
+      <a href="landing_page.html">Home</a> |
+      <a href="Index.html">Student Portal</a> |
+      <a href="register_student.html">Course Registration</a> |
+      <a href="Login.html">Sign In</a> |
+      <a href="https://www.haramaya.edu.et" target="_blank">Haramaya University Official</a>
+    </p>
+  </footer>
 
 </body>
 </html>
