@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Haramaya Health Campus — Home</title>
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    
+</head>
+<body>
+
+<!-- ========== TOP BAR ========== -->
+<header class="topbar">
+  <!-- Logo -->
+  <a class="logo-box" href="home.html">
+    <img class="logo-img" src="../images/logo.png" alt="Haramaya Health Campus Logo">
+    <div class="logo-info">
+      <h3>Haramaya Health Campus</h3>
+      <span>Harar — Ethiopia</span>
+    </div>
+  </a>
+
+  <!-- Contact -->
+  <div class="top-contact">
+    <span class="top-item"><i class="fa-solid fa-location-dot"></i> Harar</span>
+    <span class="top-item"><i class="fa-solid fa-phone"></i> +251 XXX XXX</span>
+    <span class="top-item"><i class="fa-solid fa-envelope"></i> info@haramaya.edu</span>
+  </div>
+
+  <!-- Actions -->
+  <div class="top-actions">
+    <div class="search-top">
+      <input id="searchInput" type="search" placeholder="Search courses..." />
+      <button id="searchBtn"><i class="fa fa-search"></i></button>
+    </div>
+
+    <button id="theme-toggle" class="icon-circle">
+      <i id="theme-icon" class="fa-solid fa-sun"></i>
+    </button>
+
+    <button id="hamburger" class="hamburger">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+
+<!-- ========== MAIN NAV ========== -->
+<nav class="main-nav container">
+  <ul class="menu left" id="menu-left">
+    <li><a class="active" href="home.html">Home</a></li>
+    <li><a href="courses.html">Courses</a></li>
+  </ul>
+
+  <ul class="menu right" id="menu-right">
+    <li><a href="research.html">Health Research</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+</nav>
+
+
+<!-- ========== HERO SECTION ========== -->
+<section class="banner">
+  <div class="banner-inner container">
+    <h1>
+      Preparing <span class="accent">health</span> talent 
+      for global medical careers
+    </h1>
+    <p>
+      Hands-on training, research, and modern facilities 
+      at Haramaya Health Campus in Harar, Ethiopia.
+    </p>
+
+    <div class="hero-actions">
+      <a class="btn primary" href="courses.html">Explore Courses</a>
+      <button id="tourBtn" class="btn ghost">
+        <i class="fa-solid fa-circle-play"></i> Watch Campus Tour
+      </button>
+    </div>
+  </div>
+</section>
+
+
+<!-- ========== POPULAR COURSES ========== -->
+<section class="popular container">
+  <h2>Popular Programs</h2>
+
+  <div class="courses-grid" id="index-courses">
+
+    <article class="course-card">
+      <img src="../assets/images/medicine.jpg" alt="Medicine">
+      <h3>Medicine (MD)</h3>
+      <p>Comprehensive medical curriculum with clinical rotations and internships.</p>
+      <a class="btn small" href="courses.html#medicine">View</a>
+    </article>
+
+    <article class="course-card">
+      <img src="../assets/images/pharmacy.jpg" alt="Pharmacy">
+      <h3>Pharmacy (BPharm)</h3>
+      <p>Pharmaceutical sciences, pharmacology, and community pharmacy practice.</p>
+      <a class="btn small" href="courses.html#pharmacy">View</a>
+    </article>
+
+    <article class="course-card">
+      <img src="../assets/images/public-health.jpg" alt="Public Health">
+      <h3>Public Health (BSc)</h3>
+      <p>Epidemiology, health systems, and community programs.</p>
+      <a class="btn small" href="courses.html#public-health">View</a>
+    </article>
+
+  </div>
+</section>
+
+
+<!-- ========== CAMPUS LIFE ========== -->
+<section class="campus container">
+  <h2>Campus Life</h2>
+  <p>Explore modern labs, medical library, and student clinic facilities.</p>
+
+  <div class="campus-grid">
+    <div class="card">
+      <img src="../assets/images/lab.jpg" alt="Lab">
+      <h4>Advanced Labs</h4>
+    </div>
+
+    <div class="card">
+      <img src="../assets/images/library.jpg" alt="Library">
+      <h4>Medical Library</h4>
+    </div>
+
+    <div class="card">
+      <img src="../assets/images/clinic.jpg" alt="Clinic">
+      <h4>Training Clinic</h4>
+    </div>
+  </div>
+</section>
+
+
+<!-- ========== HEALTH RESEARCH FEATURE ========== -->
+<section class="research container">
+  <h2>Health Research</h2>
+  <p>
+    Our research programs focus on public health, infectious disease studies, 
+    and improving community outcomes in Eastern Ethiopia.
+  </p>
+
+  <a class="btn primary" href="research.html">Explore Research</a>
+</section>
+
+
+<!-- ========== FOOTER ========== -->
+
+<footer class="site-footer">
+  <div class="footer-inner">
+
+    <div class="social-links">
+      <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+      <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+    </div>
+    
+    <p class="footer-copy">
+      © <span id="year"></span> Health Campus – Advancing medical education & community health.
+    </p>
+
+    <p class="developer">
+      Developed by <strong>Gemachis T.</strong>
+    </p>
+
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+
+
+
+<!-- ========== VIDEO POPUP ========== -->
+<div id="videoPopup" class="video-popup" aria-hidden="true">
+  <div class="video-wrap" role="dialog" aria-modal="true">
+    <button id="closeVideo" class="video-close">&times;</button>
+    <iframe id="tourVideo" src="" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>
+
+
+<!-- ========== COURSE POPUP ========== -->
+<div id="coursePopup" class="course-popup">
+  <div class="popup-box">
+    <button id="popupClose" class="close-btn">✕</button>
+    <div id="popupContent"></div>
+  </div>
+</div>
+
+<script src="../js/script.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Harar Health Campus — Courses</title>
+
+  <link rel="stylesheet" href="../css/courses.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+ <!-- TOPBAR (row 1) -->
+  <header class="topbar">
+
+    <!-- left: small logo -->
+    <a class="logo-box" href="home.html">
+      <img class="logo-img" src="../images/logo.png" alt="Harar Health Campus logo">
+      <div class="logo-info">
+        <h3>Harar Health Campus</h3>
+      </div>
+    </a>
+
+    <!-- center: contact items -->
+    <div class="top-contact">
+      <span class="top-item"><i class="fa-solid fa-location-dot"></i> Harar</span>
+      <span class="top-item"><i class="fa-solid fa-phone"></i> +251 XXX XXX</span>
+      <span class="top-item"><i class="fa-solid fa-envelope"></i> info@harar.edu</span>
+    </div>
+
+    <!-- right: search, theme, hamburger -->
+    <div class="top-actions">
+      <div class="search-top">
+        <input id="searchInput" type="search" placeholder="Search courses..." aria-label="Search courses">
+        <button id="searchBtn" aria-label="Search"><i class="fa fa-search"></i></button>
+      </div>
+
+      <button id="theme-toggle" class="icon-circle" aria-label="Toggle theme">
+        <i id="theme-icon" class="fa-solid fa-sun"></i>
+      </button>
+
+      <button id="hamburger" class="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MAIN NAV (split) -->
+  <nav class="main-nav container" role="navigation">
+    <ul class="menu left" id="menu-left">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="courses.html">Courses</a></li>
+    </ul>
+
+    <ul class="menu right" id="menu-right">
+      <li><a href="research.html">Health Research</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- COURSES LIST -->
+  <main class="container">
+<section class="courses">
+  <div class="container">
+    <h2 class="section-title">Our Popular Programs</h2>
+    <p class="section-sub">
+      Explore our most demanded health programs designed for modern medical education.
+    </p>
+
+    <div class="course-grid">
+
+      <!-- Medicine -->
+      <div class="course-card">
+        <div class="course-icon">
+          <i class="fa-solid fa-stethoscope"></i>
+        </div>
+        <h3>Medicine (MD)</h3>
+        <p>Comprehensive medical training focused on clinical excellence and research.</p>
+        <a href="#" class="btn-course">Explore Program</a>
+      </div>
+
+      <!-- Nursing -->
+      <div class="course-card">
+        <div class="course-icon">
+          <i class="fa-solid fa-user-nurse"></i>
+        </div>
+        <h3>Nursing (BSc)</h3>
+        <p>Hands-on nursing education designed to create highly skilled professionals.</p>
+        <a href="#" class="btn-course">Explore Program</a>
+      </div>
+
+      <!-- Pharmacy -->
+      <div class="course-card">
+        <div class="course-icon">
+          <i class="fa-solid fa-pills"></i>
+        </div>
+        <h3>Pharmacy (BPharm)</h3>
+        <p>Pharmaceutical sciences and research-driven innovations in medicine.</p>
+        <a href="#" class="btn-course">Explore Program</a>
+      </div>
+
+      <!-- Dentistry -->
+      <div class="course-card">
+        <div class="course-icon">
+          <i class="fa-solid fa-tooth"></i>
+        </div>
+        <h3>Dentistry (DDS)</h3>
+        <p>Oral health training with advanced dental practice and community service.</p>
+        <a href="#" class="btn-course">Explore Program</a>
+      </div>
+
+      <!-- MLS -->
+      <div class="course-card">
+        <div class="course-icon">
+          <i class="fa-solid fa-microscope"></i>
+        </div>
+        <h3>Medical Laboratory Science</h3>
+        <p>Essential laboratory diagnostics using advanced biomedical techniques.</p>
+        <a href="#" class="btn-course">Explore Program</a>
+      </div>
+
+      <!-- Public Health -->
+      <div class="course-card">
+        <div class="course-icon">
+          <i class="fa-solid fa-hospital-user"></i>
+        </div>
+        <h3>Public Health (MPH)</h3>
+        <p>Population health improvement through leadership, policy and community programs.</p>
+        <a href="#" class="btn-course">Explore Program</a>
+      </div>
+
+      <!-- Midwifery -->
+      <div class="course-card">
+        <div class="course-icon">
+          <i class="fa-solid fa-baby"></i>
+        </div>
+        <h3>Midwifery (BSc)</h3>
+        <p>Maternal care education empowering safe childbirth and neonatal care.</p>
+        <a href="#" class="btn-course">Explore Program</a>
+      </div>
+
+      <!-- Physiotherapy -->
+      <div class="course-card">
+        <div class="course-icon">
+          <i class="fa-solid fa-hand-holding-medical"></i>
+        </div>
+        <h3>Physiotherapy (BPT/MPT)</h3>
+        <p>Physical rehabilitation practices improving health mobility and recovery.</p>
+        <a href="#" class="btn-course">Explore Program</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+
+<footer class="site-footer">
+  <div class="footer-inner">
+
+    <div class="social-links">
+      <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+      <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+    </div>
+    
+    <p class="footer-copy">
+      © <span id="year"></span> Health Campus – Advancing medical education & community health.
+    </p>
+
+    <p class="developer">
+      Developed by <strong>Gemachis T.</strong>
+    </p>
+
+  </div>
+</footer>
+
+
+
+  <div id="videoPopup" class="video-popup" aria-hidden="true">
+    <div class="video-wrap" role="dialog" aria-modal="true">
+      <button id="closeVideo" class="video-close" aria-label="Close video">&times;</button>
+      <iframe id="tourVideo" src="" title="Campus tour" frameborder="0" allowfullscreen
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+    </div>
+  </div>
+
+  <!-- POPUP -->
+<div class="course-popup" id="coursePopup">
+  <div class="popup-inner">
+    <button class="popup-close" id="popupClose">×</button>
+    <div id="popupContent"></div>
+  </div>
+</div>
+
+<!-- Course Popup -->
+<div class="program-popup" id="coursePopup">
+  <div class="program-card">
+    
+    <button id="popupClose" class="popupClose">&times;</button>
+
+    <div class="program-header">
+      <h2 id="popupTitle"></h2>
+    </div>
+
+    <div class="program-body" id="popupDescription"></div>
+
+    <div class="program-meta" id="popupMore"></div>
+
+  </div>
+</div>
+
+
+  <script src="../js/courses.js" defer></script>
+  <script src="../js/script.js" defer></script>
+</body>
+</html>

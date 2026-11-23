@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Health Research | Haramaya Health Campus</title>
+  <link rel="stylesheet" href="../css/research.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+ 
+   <!-- TOPBAR (row 1) -->
+  <header class="topbar">
+
+    <!-- left: small logo -->
+    <a class="logo-box" href="home.html">
+      <img class="logo-img" src="../images/logo.png" alt="Harar Health Campus logo">
+      <div class="logo-info">
+        <h3>Harar Health Campus</h3>
+      </div>
+    </a>
+
+    <!-- center: contact items -->
+    <div class="top-contact">
+      <span class="top-item"><i class="fa-solid fa-location-dot"></i> Harar</span>
+      <span class="top-item"><i class="fa-solid fa-phone"></i> +251 XXX XXX</span>
+      <span class="top-item"><i class="fa-solid fa-envelope"></i> info@harar.edu</span>
+    </div>
+
+    <!-- right: search, theme, hamburger -->
+    <div class="top-actions">
+      <div class="search-top">
+        <input id="searchInput" type="search" placeholder="Search courses..." aria-label="Search courses">
+        <button id="searchBtn" aria-label="Search"><i class="fa fa-search"></i></button>
+      </div>
+
+      <button id="theme-toggle" class="icon-circle" aria-label="Toggle theme">
+        <i id="theme-icon" class="fa-solid fa-sun"></i>
+      </button>
+
+      <button id="hamburger" class="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MAIN NAVBAR (row 2) - SPLIT LAYOUT -->
+  <nav class="main-nav container" role="navigation">
+    <ul class="menu left" id="menu-left">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="courses.html">Courses</a></li>
+    </ul>
+
+    <ul class="menu right" id="menu-right">
+      <li><a href="research.html">Health Research</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+
+
+<section class="hero">
+  <h1>Health Research at <span>Haramaya</span></h1>
+  <p>Community-based research improving health outcomes in Harar, Ethiopia and beyond.</p>
+</section>
+
+<section class="research-areas">
+  <h2>Research Focus Areas</h2>
+
+  <div class="cards">
+    
+    <!-- Communicable -->
+    <div class="r-card">
+      <i class="fa-solid fa-virus-covid"></i>
+      <h3>Communicable Diseases</h3>
+      <p>TB, Malaria, HIV, Hepatitis, Vaccine research.</p>
+      <button class="view-details" data-modal="modal1">View Details</button>
+    </div>
+
+    <!-- Non Communicable -->
+    <div class="r-card">
+      <i class="fa-solid fa-heart-pulse"></i>
+      <h3>Non-Communicable Diseases</h3>
+      <p>Diabetes, Cancer, Cardiovascular research.</p>
+      <button class="view-details" data-modal="modal2">View Details</button>
+    </div>
+
+    <!-- Maternal -->
+    <div class="r-card">
+      <i class="fa-solid fa-baby"></i>
+      <h3>Maternal & Child Health</h3>
+      <p>Maternal mortality, child nutrition research.</p>
+      <button class="view-details" data-modal="modal3">View Details</button>
+    </div>
+
+  </div>
+</section>
+
+<section class="projects">
+  <h2>Current Research Projects</h2>
+
+  <div class="project-list">
+    <div class="project">
+      <h3>Reducing Child Malnutrition in Eastern Ethiopia</h3>
+      <p>Field study in rural districts to identify causes of malnutrition and test community-based solutions.</p>
+    </div>
+    
+    <div class="project">
+      <h3>Impact of HPV Vaccination Program</h3>
+      <p>Long-term study to measure effectiveness and awareness of HPV vaccination.</p>
+    </div>
+
+    <div class="project">
+      <h3>AI-assisted Malaria Diagnosis</h3>
+      <p>Developing machine learning models for early detection of malaria using microscopy images.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+
+<footer class="site-footer">
+  <div class="footer-inner">
+
+    <div class="social-links">
+      <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+      <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+    </div>
+    
+    <p class="footer-copy">
+      © <span id="year"></span> Health Campus – Advancing medical education & community health.
+    </p>
+
+    <p class="developer">
+      Developed by <strong>Gemachis T.</strong>
+    </p>
+
+  </div>
+</footer>
+
+<!-- ===== MODALS ===== -->
+
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Communicable Diseases</h2>
+    <p>
+      Our communicable disease research focuses on tuberculosis, malaria, HIV,
+      and emerging viral diseases, working with local hospitals and communities.
+    </p>
+  </div>
+</div>
+
+<div id="modal2" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Non-Communicable Diseases</h2>
+    <p>
+      Projects include diabetes management, cancer early detection, and
+      cardiovascular risk analysis in Eastern Ethiopia.
+    </p>
+  </div>
+</div>
+
+<div id="modal3" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Maternal & Child Health</h2>
+    <p>
+      Research on maternal mortality reduction, infant nutrition, and
+      community intervention programs.
+    </p>
+  </div>
+</div>
+
+<script src="../js/research.js"></script>
+</body>
+</html>

@@ -1,0 +1,213 @@
+body.no-scroll {
+  overflow: hidden;
+}
+
+/* ====== COURSE GRID ====== */
+.courses {
+  padding: 60px 0;
+}
+
+.section-title {
+  font-size: 2.4rem;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #6f58ff, #ff4bc6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section-sub {
+  text-align: center;
+  margin-bottom: 40px;
+  opacity: 0.8;
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+  gap: 30px;
+}
+
+.course-card {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.17);
+  border-radius: 14px;
+  text-align: center;
+  padding: 25px 20px;
+  transition: 0.35s ease;
+  backdrop-filter: blur(12px);
+}
+
+.course-card:hover {
+  transform: translateY(-6px);
+  border-color: #a27cff;
+  box-shadow: 0 10px 35px rgba(110,50,255,0.26);
+}
+
+.course-icon {
+  font-size: 2.8rem;
+  margin-bottom: 12px;
+}
+
+.course-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.course-card p {
+  font-size: 0.95rem;
+  opacity: 0.85;
+  margin-bottom: 15px;
+}
+
+.btn-course {
+  display: inline-block;
+  padding: 10px 20px;
+  background: linear-gradient(90deg,#6f58ff,#ff4bc6);
+  border-radius: 10px;
+  font-weight: 600;
+  color: #fff;
+  transition: 0.2s;
+}
+
+.btn-course:hover {
+  opacity: 0.8;
+}
+
+/* ===== POPUP ===== */
+
+.course-popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(6px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 999;
+  animation: fadeIn 0.3s ease;
+}
+
+.popup-inner {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 16px;
+  max-width: 650px;
+  width: 100%;
+  padding: 30px;
+  animation: scaleUp 0.3s ease;
+  position: relative;
+  backdrop-filter: blur(15px);
+}
+
+.popup-close {
+  position: absolute;
+  right: 18px;
+  top: 14px;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Content */
+#popupContent h2 {
+  margin-bottom: 8px;
+  font-size: 1.8rem;
+}
+
+#popupContent p {
+  line-height: 1.6;
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0;}
+  to { opacity: 1;}
+}
+
+@keyframes scaleUp {
+  from { transform: scale(0.85);}
+  to { transform: scale(1);}
+}
+
+/* Large Popup */
+.program-popup{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.7);
+  backdrop-filter:blur(8px);
+  justify-content:center;
+  align-items:center;
+  z-index:999;
+  padding:20px;
+}
+
+.program-card{
+  width:100%;
+  max-width:920px;
+  max-height:90vh;
+  overflow-y:auto;
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.2);
+  border-radius:20px;
+  padding:32px;
+  box-shadow:0 30px 80px rgba(0,0,0,0.4);
+  position:relative;
+  animation:popupFade .25s ease;
+}
+
+/* popup animation */
+@keyframes popupFade{
+  from{opacity:0;transform:scale(.92)}
+  to{opacity:1;transform:scale(1)}
+}
+
+.popupClose{
+  position:absolute;
+  right:18px;
+  top:14px;
+  background:transparent;
+  border:none;
+  color:white;
+  font-size:38px;
+  cursor:pointer;
+}
+
+.program-header h2{
+  font-size:32px;
+  font-weight:800;
+  margin-bottom:14px;
+  background:linear-gradient(90deg,#7b61ff,#00d4ff);
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+.program-body{
+  font-size:17px;
+  line-height:1.7;
+  color:white;
+  opacity:.96;
+  margin-bottom:24px;
+}
+
+.program-meta{
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.1);
+  padding:18px 20px;
+  border-radius:12px;
+  font-size:15px;
+  line-height:1.6;
+  color:white;
+  opacity:.9;
+}
+
+.program-meta strong{
+  color:#7b61ff;
+}
