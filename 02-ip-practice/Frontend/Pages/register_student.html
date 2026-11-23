@@ -1,78 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page layeout</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration Lab | IP Practicum Lab</title>
+  <link rel="stylesheet" href="../CSS/style1.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    
-    <table  width="100%" height="460">
 
-        <tr>
-            <td colspan="3">
-                <img src="../Images/haramaya-logo-1.png" alt="">
-            </td>
-            
-        </tr>
+  <header class="workbench-header">
+    <div class="workbench-nav">
+      <div class="brand-badge">
+        <a href="Index.html" class="nav-item" style="color:var(--lab-dark); font-weight:700;">
+          <i class="fa-solid fa-arrow-left"></i> Return to Lab Workbench
+        </a>
+      </div>
+      <div class="workbench-links">
+        <span class="pill-lab">Lab 02 &bull; Accessible Forms</span>
+      </div>
+    </div>
+  </header>
 
-        <tr height="200">
-           <td width="20%"> <h2>Pages</h2> <br>
-               <h3><a href="../Pages/pagelayout.html">Home</a></h3>  <br>
-                <h3><a href="../Pages/table.html">Table list</a></h3> <br>
-                <h3><a href="../Pages/list.html">List</a></h3> <br>
-                <h3><a href="../Pages/create_account.html">Create Account</a></h3>  <br>
-                <h3><a href="../Pages/register_student.html">Register Student</a></h3>  <br>
-            </td>
-            <td>  <h1> Student Registration</h1>
-    <form>
+  <main class="workbench-container">
+    <div style="margin-bottom: 2rem;">
+      <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--lab-dark);">HTML5 Form Elements & Student Registration</h2>
+      <p style="color: var(--lab-text-muted);">Demonstration of accessible label associations, input restrictions, radio option groups, and dropdown selects.</p>
+    </div>
 
-         <label for="">ID Number</label>
-        <input type="text" value="1381/16" readonly> <br> <br>
-        <label for="">First name</label>
-        <input type="text" placeholder="your name"> <br> <br>
-         <label for="">age</label>
-        <input type="number" max="60" placeholder="your age"> <br> <br>
-         <label for="">Gender   </label>
-        male<input type="radio">  female<input type="radio"><br> <br>
+    <div style="max-width: 720px; margin: 0 auto; background: white; border: 1px solid var(--lab-border); border-radius: var(--radius-md); padding: 2.5rem; box-shadow: var(--shadow-sm);">
+      <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--lab-border);">
+        <img src="../Images/haramaya-logo-1.png" alt="HU Logo" style="height: 48px;">
+        <div>
+          <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--lab-dark);">Haramaya University &bull; Student Registration</h3>
+          <p style="color: var(--lab-text-muted); font-size: 0.85rem;">Department of Information Science Practicum</p>
+        </div>
+      </div>
 
-        <label for="">Department:</label>
-        <select>
-            <option selected disabled value ="">Select department</option>
-            <option value="">Information Scence</option>
-            <option value="">Information Technology</option>
-            <option value="">Information System</option>
-            <option value="">Software Enginering</option>
-            <option value="">Computer Science</option>
-        </select> <br> <br>
+      <form id="labRegForm" onsubmit="event.preventDefault(); alert('Form submitted successfully with valid student data!');">
+        <div style="margin-bottom: 1.25rem;">
+          <label style="display: block; font-weight: 600; font-size: 0.88rem; margin-bottom: 0.35rem; color: var(--lab-dark);">
+            Matriculation ID Number
+          </label>
+          <input type="text" value="1381/16" readonly style="width: 100%; padding: 0.65rem 0.85rem; border: 1px solid var(--lab-border); border-radius: var(--radius-sm); font-family: 'JetBrains Mono', monospace; background: #f8fafc; color: var(--lab-dark);">
+          <small style="color: var(--lab-text-light); font-size: 0.75rem;">Read-only matriculation assignment</small>
+        </div>
 
-        <label for="">Comment</label>
-        <textarea> Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis odit rerum veritatis 
-            assumenda tenetur! Consequuntur, quas! Commodi officiis magnam ut debitis, numquam, optio et 
-            nemo facilis consequuntur harum officia natus.</textarea>  <br> <br>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-bottom: 1.25rem;">
+          <div>
+            <label style="display: block; font-weight: 600; font-size: 0.88rem; margin-bottom: 0.35rem; color: var(--lab-dark);">
+              First Name <span style="color:#ef4444;">*</span>
+            </label>
+            <input type="text" placeholder="Enter first name" required style="width: 100%; padding: 0.65rem 0.85rem; border: 1px solid var(--lab-border); border-radius: var(--radius-sm); font-size: 0.9rem;">
+          </div>
+          <div>
+            <label style="display: block; font-weight: 600; font-size: 0.88rem; margin-bottom: 0.35rem; color: var(--lab-dark);">
+              Age
+            </label>
+            <input type="number" min="16" max="65" value="21" style="width: 100%; padding: 0.65rem 0.85rem; border: 1px solid var(--lab-border); border-radius: var(--radius-sm); font-size: 0.9rem;">
+          </div>
+        </div>
 
-    
+        <div style="margin-bottom: 1.25rem;">
+          <label style="display: block; font-weight: 600; font-size: 0.88rem; margin-bottom: 0.5rem; color: var(--lab-dark);">
+            Gender
+          </label>
+          <div style="display: flex; gap: 2rem; align-items: center;">
+            <label style="display: flex; align-items: center; gap: 0.4rem; cursor: pointer; font-size: 0.9rem;">
+              <input type="radio" name="gender" value="male" checked> Male
+            </label>
+            <label style="display: flex; align-items: center; gap: 0.4rem; cursor: pointer; font-size: 0.9rem;">
+              <input type="radio" name="gender" value="female"> Female
+            </label>
+          </div>
+        </div>
 
-    </form>
-                    
-            </td>
-            <td width="20%">
-                <h2>Social Media</h2> <br>
-               <h3><a href="www.facebook.com">Facebook</a></h3>  <br>
-                <h3><a href="www.instagram.com">Instagram</a></h3> <br>
-                <h3><a href="wwww.telegram.com">Telegram</a></h3> <br>
-                <h3><a href="www.youtube.com">Youtube</a></h3>  <br>
-                <h3><a href="www.linkedin.com">Linkedin</a></h3>  <br>
-            </td>
-        </tr>
+        <div style="margin-bottom: 1.25rem;">
+          <label style="display: block; font-weight: 600; font-size: 0.88rem; margin-bottom: 0.35rem; color: var(--lab-dark);">
+            Department / Major <span style="color:#ef4444;">*</span>
+          </label>
+          <select style="width: 100%; padding: 0.65rem 0.85rem; border: 1px solid var(--lab-border); border-radius: var(--radius-sm); font-size: 0.9rem; background: white;" required>
+            <option value="" disabled>Select department</option>
+            <option value="IS" selected>Information Science</option>
+            <option value="SE">Software Engineering</option>
+            <option value="CS">Computer Science</option>
+            <option value="IT">Information Technology</option>
+            <option value="ISys">Information Systems</option>
+          </select>
+        </div>
 
-        <tr>
-            <td colspan="3" >
-                <p align="center"> All &copy; 2016 Information Science at Haramaya University</p>
-            </td> 
-        </tr>
+        <div style="margin-bottom: 1.75rem;">
+          <label style="display: block; font-weight: 600; font-size: 0.88rem; margin-bottom: 0.35rem; color: var(--lab-dark);">
+            Registration Notes / Comments
+          </label>
+          <textarea rows="4" style="width: 100%; padding: 0.65rem 0.85rem; border: 1px solid var(--lab-border); border-radius: var(--radius-sm); font-size: 0.9rem; resize: vertical;" placeholder="Laboratory interests or academic notes...">Enrolled in Internet Programming Practicum under College of Computing and Informatics.</textarea>
+        </div>
 
+        <div style="display: flex; justify-content: flex-end; gap: 1rem;">
+          <button type="reset" class="btn btn-outline">Reset Form</button>
+          <button type="submit" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Submit Registration</button>
+        </div>
+      </form>
+    </div>
 
-    </table>
+    <div style="margin-top: 2rem; display: flex; justify-content: space-between; align-items: center;">
+      <a href="table.html" class="btn btn-outline"><i class="fa-solid fa-arrow-left"></i> Previous Lab: Tables</a>
+      <a href="graphics.html" class="btn btn-primary">Next Lab: Multimedia <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </main>
+
+  <footer class="workbench-footer">
+    <p>&copy; 2026 Internet Programming Practicum &bull; Haramaya University</p>
+  </footer>
 </body>
 </html>

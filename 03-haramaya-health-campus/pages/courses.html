@@ -1,220 +1,366 @@
-<!doctype html>
-<html lang="en" data-theme="dark">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Harar Health Campus — Courses</title>
-
-  <link rel="stylesheet" href="../css/courses.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Academic Programs & Courses | Haramaya Health Campus</title>
   <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    .search-filter-bar {
+      background: var(--surface-white);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      margin-bottom: 2.5rem;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .search-input-wrapper {
+      flex: 1;
+      min-width: 260px;
+      position: relative;
+    }
+    .search-input-wrapper input {
+      width: 100%;
+      padding: 0.75rem 1rem 0.75rem 2.5rem;
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      font-size: 0.95rem;
+      font-family: inherit;
+      outline: none;
+      transition: var(--transition);
+    }
+    .search-input-wrapper input:focus {
+      border-color: var(--primary-accent);
+      box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+    }
+    .search-input-wrapper i {
+      position: absolute;
+      left: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+    }
+    .filter-tabs {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+    .filter-btn {
+      padding: 0.5rem 1rem;
+      border-radius: var(--radius-sm);
+      background: var(--surface-alt);
+      border: 1px solid var(--border-light);
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .filter-btn.active, .filter-btn:hover {
+      background: var(--primary-navy);
+      color: var(--text-white);
+      border-color: var(--primary-navy);
+    }
+    .course-card {
+      background: var(--surface-white);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 1.75rem;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .course-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+      border-color: #cbd5e1;
+    }
+    .course-meta {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.75rem;
+    }
+    .badge-level {
+      background: #eff6ff;
+      color: #1d4ed8;
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+    }
+    .badge-duration {
+      color: var(--text-muted);
+    }
+  </style>
 </head>
 <body>
- <!-- TOPBAR (row 1) -->
-  <header class="topbar">
 
-    <!-- left: small logo -->
-    <a class="logo-box" href="home.html">
-      <img class="logo-img" src="../images/logo.png" alt="Harar Health Campus logo">
-      <div class="logo-info">
-        <h3>Harar Health Campus</h3>
+  <!-- Top Utility Bar -->
+  <div class="top-utility">
+    <div class="container top-utility-inner">
+      <div class="utility-contact">
+        <span class="utility-item"><i class="fa-solid fa-location-dot"></i> Harar Campus, Ethiopia</span>
+        <span class="utility-item"><i class="fa-solid fa-phone"></i> +251 25 666 0612</span>
+        <span class="utility-item"><i class="fa-solid fa-envelope"></i> contact@haramaya.edu.et</span>
       </div>
-    </a>
-
-    <!-- center: contact items -->
-    <div class="top-contact">
-      <span class="top-item"><i class="fa-solid fa-location-dot"></i> Harar</span>
-      <span class="top-item"><i class="fa-solid fa-phone"></i> +251 XXX XXX</span>
-      <span class="top-item"><i class="fa-solid fa-envelope"></i> info@harar.edu</span>
+      <div class="utility-links">
+        <a href="home.html" class="utility-link">Home</a>
+        <a href="about.html" class="utility-link">About Campus</a>
+        <a href="research.html" class="utility-link">Research</a>
+        <a href="../docs/haramaya-brochure.pdf" class="utility-link" download><i class="fa-solid fa-file-pdf"></i> Brochure</a>
+      </div>
     </div>
+  </div>
 
-    <!-- right: search, theme, hamburger -->
-    <div class="top-actions">
-      <div class="search-top">
-        <input id="searchInput" type="search" placeholder="Search courses..." aria-label="Search courses">
-        <button id="searchBtn" aria-label="Search"><i class="fa fa-search"></i></button>
-      </div>
+  <!-- Main Navigation Header -->
+  <header class="main-header">
+    <div class="container header-inner">
+      <a href="home.html" class="brand-box">
+        <img src="../images/logo.png" alt="Haramaya University Crest" class="brand-logo">
+        <div class="brand-text">
+          <h1>Haramaya University</h1>
+          <span>College of Health & Medical Sciences</span>
+        </div>
+      </a>
 
-      <button id="theme-toggle" class="icon-circle" aria-label="Toggle theme">
-        <i id="theme-icon" class="fa-solid fa-sun"></i>
+      <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars"></i>
       </button>
 
-      <button id="hamburger" class="hamburger" aria-label="Open menu">
-        <span></span><span></span><span></span>
-      </button>
+      <nav class="main-nav" id="mainNav">
+        <a href="home.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="courses.html" class="nav-link active">Programs & Courses</a>
+        <a href="research.html" class="nav-link">Research</a>
+        <a href="home.html#campus-map" class="nav-link">Campus Map</a>
+        <a href="courses.html" class="nav-btn"><i class="fa-solid fa-graduation-cap"></i> Apply Now</a>
+      </nav>
     </div>
   </header>
 
-  <!-- MAIN NAV (split) -->
-  <nav class="main-nav container" role="navigation">
-    <ul class="menu left" id="menu-left">
-      <li><a href="home.html">Home</a></li>
-      <li><a href="courses.html">Courses</a></li>
-    </ul>
-
-    <ul class="menu right" id="menu-right">
-      <li><a href="research.html">Health Research</a></li>
-      <li><a href="about.html">About</a></li>
-    </ul>
-  </nav>
-
-  <!-- COURSES LIST -->
-  <main class="container">
-<section class="courses">
-  <div class="container">
-    <h2 class="section-title">Our Popular Programs</h2>
-    <p class="section-sub">
-      Explore our most demanded health programs designed for modern medical education.
-    </p>
-
-    <div class="course-grid">
-
-      <!-- Medicine -->
-      <div class="course-card">
-        <div class="course-icon">
-          <i class="fa-solid fa-stethoscope"></i>
-        </div>
-        <h3>Medicine (MD)</h3>
-        <p>Comprehensive medical training focused on clinical excellence and research.</p>
-        <a href="#" class="btn-course">Explore Program</a>
+  <!-- Page Banner -->
+  <section class="hero-section" style="padding: 3.5rem 0 4rem;">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-pill"><i class="fa-solid fa-book-open"></i> Academic Catalog</div>
+        <h2 class="hero-title" style="font-size: 2.25rem;">Degree Programs & Medical Curricula</h2>
+        <p class="hero-lead">Explore fully accredited undergraduate, postgraduate, and clinical residency degrees across health and medical disciplines.</p>
       </div>
-
-      <!-- Nursing -->
-      <div class="course-card">
-        <div class="course-icon">
-          <i class="fa-solid fa-user-nurse"></i>
-        </div>
-        <h3>Nursing (BSc)</h3>
-        <p>Hands-on nursing education designed to create highly skilled professionals.</p>
-        <a href="#" class="btn-course">Explore Program</a>
-      </div>
-
-      <!-- Pharmacy -->
-      <div class="course-card">
-        <div class="course-icon">
-          <i class="fa-solid fa-pills"></i>
-        </div>
-        <h3>Pharmacy (BPharm)</h3>
-        <p>Pharmaceutical sciences and research-driven innovations in medicine.</p>
-        <a href="#" class="btn-course">Explore Program</a>
-      </div>
-
-      <!-- Dentistry -->
-      <div class="course-card">
-        <div class="course-icon">
-          <i class="fa-solid fa-tooth"></i>
-        </div>
-        <h3>Dentistry (DDS)</h3>
-        <p>Oral health training with advanced dental practice and community service.</p>
-        <a href="#" class="btn-course">Explore Program</a>
-      </div>
-
-      <!-- MLS -->
-      <div class="course-card">
-        <div class="course-icon">
-          <i class="fa-solid fa-microscope"></i>
-        </div>
-        <h3>Medical Laboratory Science</h3>
-        <p>Essential laboratory diagnostics using advanced biomedical techniques.</p>
-        <a href="#" class="btn-course">Explore Program</a>
-      </div>
-
-      <!-- Public Health -->
-      <div class="course-card">
-        <div class="course-icon">
-          <i class="fa-solid fa-hospital-user"></i>
-        </div>
-        <h3>Public Health (MPH)</h3>
-        <p>Population health improvement through leadership, policy and community programs.</p>
-        <a href="#" class="btn-course">Explore Program</a>
-      </div>
-
-      <!-- Midwifery -->
-      <div class="course-card">
-        <div class="course-icon">
-          <i class="fa-solid fa-baby"></i>
-        </div>
-        <h3>Midwifery (BSc)</h3>
-        <p>Maternal care education empowering safe childbirth and neonatal care.</p>
-        <a href="#" class="btn-course">Explore Program</a>
-      </div>
-
-      <!-- Physiotherapy -->
-      <div class="course-card">
-        <div class="course-icon">
-          <i class="fa-solid fa-hand-holding-medical"></i>
-        </div>
-        <h3>Physiotherapy (BPT/MPT)</h3>
-        <p>Physical rehabilitation practices improving health mobility and recovery.</p>
-        <a href="#" class="btn-course">Explore Program</a>
-      </div>
-
     </div>
-  </div>
-</section>
+  </section>
 
-  </main>
+  <!-- Programs Directory -->
+  <section class="section">
+    <div class="container">
 
-  <!-- ========== FOOTER ========== -->
+      <!-- Interactive Search & Filter Bar -->
+      <div class="search-filter-bar">
+        <div class="search-input-wrapper">
+          <i class="fa-solid fa-search"></i>
+          <input type="text" id="courseSearch" placeholder="Search by program name or discipline (e.g. Medicine, Pharmacy)...">
+        </div>
+        <div class="filter-tabs">
+          <button class="filter-btn active" data-filter="all">All Programs</button>
+          <button class="filter-btn" data-filter="medicine">Medicine</button>
+          <button class="filter-btn" data-filter="pharmacy">Pharmacy</button>
+          <button class="filter-btn" data-filter="nursing">Nursing & Midwifery</button>
+          <button class="filter-btn" data-filter="public-health">Public Health</button>
+        </div>
+      </div>
 
-<footer class="site-footer">
-  <div class="footer-inner">
+      <!-- Courses Grid -->
+      <div class="cards-grid" id="courseContainer">
 
-    <div class="social-links">
-      <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-      <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-      <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-      <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <!-- Program 1 -->
+        <article class="course-card" data-category="medicine">
+          <div>
+            <div class="course-meta">
+              <span class="badge-level">Doctorate</span>
+              <span class="badge-duration"><i class="fa-regular fa-clock"></i> 5.5 Years</span>
+            </div>
+            <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--primary-navy); margin-bottom: 0.5rem;">Doctor of Medicine (MD)</h3>
+            <p style="color: var(--text-secondary); font-size: 0.92rem; margin-bottom: 1.25rem;">Complete medical physician education encompassing preclinical biomedical sciences and intensive clinical clerkships at Hiwot Fana Hospital.</p>
+            <ul class="school-features">
+              <li><i class="fa-solid fa-check"></i> Internal Medicine & Surgery</li>
+              <li><i class="fa-solid fa-check"></i> Pediatrics & Child Health</li>
+              <li><i class="fa-solid fa-check"></i> Obstetrics & Gynecology</li>
+            </ul>
+          </div>
+          <div>
+            <a href="../docs/haramaya-brochure.pdf" class="card-link" download>Download Syllabus <i class="fa-solid fa-arrow-down"></i></a>
+          </div>
+        </article>
+
+        <!-- Program 2 -->
+        <article class="course-card" data-category="pharmacy">
+          <div>
+            <div class="course-meta">
+              <span class="badge-level">Undergraduate</span>
+              <span class="badge-duration"><i class="fa-regular fa-clock"></i> 5 Years</span>
+            </div>
+            <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--primary-navy); margin-bottom: 0.5rem;">Bachelor of Pharmacy (B.Pharm)</h3>
+            <p style="color: var(--text-secondary); font-size: 0.92rem; margin-bottom: 1.25rem;">Rigorous training in medicinal chemistry, pharmacology, pharmacokinetics, biopharmaceutics, and hospital clinical pharmacy services.</p>
+            <ul class="school-features">
+              <li><i class="fa-solid fa-check"></i> Pharmaceutical Analysis</li>
+              <li><i class="fa-solid fa-check"></i> Clinical Therapeutics</li>
+              <li><i class="fa-solid fa-check"></i> Drug Formulation & Quality Control</li>
+            </ul>
+          </div>
+          <div>
+            <a href="../docs/haramaya-brochure.pdf" class="card-link" download>Download Syllabus <i class="fa-solid fa-arrow-down"></i></a>
+          </div>
+        </article>
+
+        <!-- Program 3 -->
+        <article class="course-card" data-category="nursing">
+          <div>
+            <div class="course-meta">
+              <span class="badge-level">Undergraduate</span>
+              <span class="badge-duration"><i class="fa-regular fa-clock"></i> 4 Years</span>
+            </div>
+            <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--primary-navy); margin-bottom: 0.5rem;">BSc in Comprehensive Nursing</h3>
+            <p style="color: var(--text-secondary); font-size: 0.92rem; margin-bottom: 1.25rem;">Developing patient-centered clinical nursing skills, emergency resuscitation, surgical ward care, and community public healthcare.</p>
+            <ul class="school-features">
+              <li><i class="fa-solid fa-check"></i> Acute & Critical Care Nursing</li>
+              <li><i class="fa-solid fa-check"></i> Mental Health & Psychiatry</li>
+              <li><i class="fa-solid fa-check"></i> Community Health Outreach</li>
+            </ul>
+          </div>
+          <div>
+            <a href="../docs/haramaya-brochure.pdf" class="card-link" download>Download Syllabus <i class="fa-solid fa-arrow-down"></i></a>
+          </div>
+        </article>
+
+        <!-- Program 4 -->
+        <article class="course-card" data-category="nursing">
+          <div>
+            <div class="course-meta">
+              <span class="badge-level">Undergraduate</span>
+              <span class="badge-duration"><i class="fa-regular fa-clock"></i> 4 Years</span>
+            </div>
+            <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--primary-navy); margin-bottom: 0.5rem;">BSc in Clinical Midwifery</h3>
+            <p style="color: var(--text-secondary); font-size: 0.92rem; margin-bottom: 1.25rem;">Specialized maternal care, normal and emergency obstetrics, neonatal intensive care, and reproductive health clinical practice.</p>
+            <ul class="school-features">
+              <li><i class="fa-solid fa-check"></i> Antenatal & Labor Management</li>
+              <li><i class="fa-solid fa-check"></i> Neonatal Resuscitation & Care</li>
+              <li><i class="fa-solid fa-check"></i> Reproductive Health Epidemiology</li>
+            </ul>
+          </div>
+          <div>
+            <a href="../docs/haramaya-brochure.pdf" class="card-link" download>Download Syllabus <i class="fa-solid fa-arrow-down"></i></a>
+          </div>
+        </article>
+
+        <!-- Program 5 -->
+        <article class="course-card" data-category="public-health">
+          <div>
+            <div class="course-meta">
+              <span class="badge-level">Postgraduate</span>
+              <span class="badge-duration"><i class="fa-regular fa-clock"></i> 2 Years</span>
+            </div>
+            <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--primary-navy); margin-bottom: 0.5rem;">Master of Public Health (MPH)</h3>
+            <p style="color: var(--text-secondary); font-size: 0.92rem; margin-bottom: 1.25rem;">Advanced leadership training in biostatistics, epidemiology, health systems policy, environmental sanitation, and global health intervention design.</p>
+            <ul class="school-features">
+              <li><i class="fa-solid fa-check"></i> Advanced Epidemiological Modeling</li>
+              <li><i class="fa-solid fa-check"></i> Health Economics & Policy</li>
+              <li><i class="fa-solid fa-check"></i> Field Thesis & Defense</li>
+            </ul>
+          </div>
+          <div>
+            <a href="../docs/haramaya-brochure.pdf" class="card-link" download>Download Syllabus <i class="fa-solid fa-arrow-down"></i></a>
+          </div>
+        </article>
+
+        <!-- Program 6 -->
+        <article class="course-card" data-category="medicine">
+          <div>
+            <div class="course-meta">
+              <span class="badge-level">Postgraduate Residency</span>
+              <span class="badge-duration"><i class="fa-regular fa-clock"></i> 3-4 Years</span>
+            </div>
+            <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--primary-navy); margin-bottom: 0.5rem;">Clinical Residency in General Surgery</h3>
+            <p style="color: var(--text-secondary); font-size: 0.92rem; margin-bottom: 1.25rem;">Postgraduate medical residency combining surgical pathology, operative procedures, trauma resuscitation, and critical patient management.</p>
+            <ul class="school-features">
+              <li><i class="fa-solid fa-check"></i> Laparoscopic & Emergency Surgery</li>
+              <li><i class="fa-solid fa-check"></i> Surgical Intensive Care (SICU)</li>
+              <li><i class="fa-solid fa-check"></i> Senior Registrar Rotations</li>
+            </ul>
+          </div>
+          <div>
+            <a href="../docs/haramaya-brochure.pdf" class="card-link" download>Download Syllabus <i class="fa-solid fa-arrow-down"></i></a>
+          </div>
+        </article>
+
+      </div>
     </div>
-    
-    <p class="footer-copy">
-      © <span id="year"></span> Health Campus – Advancing medical education & community health.
-    </p>
+  </section>
 
-    <p class="developer">
-      Developed by <strong>Gemachis T.</strong>
-    </p>
-
-  </div>
-</footer>
-
-
-
-  <div id="videoPopup" class="video-popup" aria-hidden="true">
-    <div class="video-wrap" role="dialog" aria-modal="true">
-      <button id="closeVideo" class="video-close" aria-label="Close video">&times;</button>
-      <iframe id="tourVideo" src="" title="Campus tour" frameborder="0" allowfullscreen
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 Haramaya University College of Health and Medical Sciences.</p>
+        <p><a href="home.html" style="color: var(--accent-teal);">Back to Home</a></p>
+      </div>
     </div>
-  </div>
+  </footer>
 
-  <!-- POPUP -->
-<div class="course-popup" id="coursePopup">
-  <div class="popup-inner">
-    <button class="popup-close" id="popupClose">×</button>
-    <div id="popupContent"></div>
-  </div>
-</div>
+  <script>
+    // Live Search & Filter Logic
+    const searchInput = document.getElementById('courseSearch');
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const courseCards = document.querySelectorAll('.course-card');
 
-<!-- Course Popup -->
-<div class="program-popup" id="coursePopup">
-  <div class="program-card">
-    
-    <button id="popupClose" class="popupClose">&times;</button>
+    let currentFilter = 'all';
 
-    <div class="program-header">
-      <h2 id="popupTitle"></h2>
-    </div>
+    function filterCourses() {
+      const term = (searchInput.value || '').toLowerCase().trim();
+      courseCards.forEach(card => {
+        const text = card.textContent.toLowerCase();
+        const category = card.getAttribute('data-category');
+        const matchesSearch = text.includes(term);
+        const matchesCategory = currentFilter === 'all' || category === currentFilter;
 
-    <div class="program-body" id="popupDescription"></div>
+        if (matchesSearch && matchesCategory) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
 
-    <div class="program-meta" id="popupMore"></div>
+    if (searchInput) {
+      searchInput.addEventListener('input', filterCourses);
+    }
 
-  </div>
-</div>
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentFilter = btn.getAttribute('data-filter');
+        filterCourses();
+      });
+    });
 
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mainNav = document.getElementById('mainNav');
+    if (mobileMenuBtn && mainNav) {
+      mobileMenuBtn.addEventListener('click', () => {
+        mainNav.classList.toggle('open');
+      });
+    }
+  </script>
 
-  <script src="../js/courses.js" defer></script>
-  <script src="../js/script.js" defer></script>
 </body>
 </html>

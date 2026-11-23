@@ -1,37 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Our Landing Page</title>
-    <link rel="stylesheet" href="../css/landing_page.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>URJIKO Training Portal | Accelerate Your Tech Career</title>
+  <link rel="stylesheet" href="../CSS/landing_page.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <div class="container">
-        
 
-        <header class="header">
-            <h1>This is header</h1>
-        </header>
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="landing_page.html" class="brand">
+        <div class="brand-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+        <span>URJIKO Labs</span>
+      </a>
 
-
-        <nav class="navbar">
-            <p> Home | About | Contact Us | Login</p>
-        </nav>
-
-
-        <main class="main">
-            <section class="card1"></section>
-            <section class="card2"></section>
-            <section class="card3"></section>
-        </main>
-
-
-     <footer class="footer">
-         
-         <p>&copy; 2024 Your Company. All rights reserved.</p>
-     </footer>
-
+      <nav class="nav-links">
+        <a href="#features">Key Features</a>
+        <a href="#curriculum">Tracks</a>
+        <a href="Index.html">Dashboard</a>
+        <a href="Login.html">Sign In</a>
+        <a href="register_student.html" class="btn btn-primary btn-sm">Enroll Now</a>
+      </nav>
     </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-pill">
+        <i class="fa-solid fa-bolt"></i> 2026 Practical Cohort Enrollment Open
+      </div>
+      <h1 class="hero-title">Empowering Tech Talents Through Hands-on Software Training</h1>
+      <p class="hero-lead">Master real-world full-stack web engineering, database architecture, and API systems through cohort-based mentorship and laboratory tasks.</p>
+      
+      <div class="hero-btns">
+        <a href="register_student.html" class="btn btn-primary">
+          <i class="fa-solid fa-user-plus"></i> Register as Student
+        </a>
+        <a href="Index.html" class="btn btn-secondary">
+          <i class="fa-solid fa-arrow-right-to-bracket"></i> Launch Student Portal
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features-section" id="features">
+    <div class="container">
+      <div class="section-head">
+        <h2>Designed for Real Learning Impact</h2>
+        <p>Combining structured curriculums with automated evaluation and mentor reviews.</p>
+      </div>
+
+      <div class="grid-3">
+        <!-- Feature 1 -->
+        <article class="card">
+          <div class="card-icon"><i class="fa-solid fa-code"></i></div>
+          <h3>Full-Stack Web Tracks</h3>
+          <p>Comprehensive curriculum covering modern HTML5, CSS Grid/Flexbox, JavaScript ES6+, backend REST APIs, and database migrations.</p>
+        </article>
+
+        <!-- Feature 2 -->
+        <article class="card">
+          <div class="card-icon"><i class="fa-solid fa-qrcode"></i></div>
+          <h3>QR Code Session Check-in</h3>
+          <p>Rotating secure QR attendance tokens for frictionless daily laboratory check-ins directly from student devices.</p>
+        </article>
+
+        <!-- Feature 3 -->
+        <article class="card">
+          <div class="card-icon"><i class="fa-solid fa-list-check"></i></div>
+          <h3>Tasks & Submissions</h3>
+          <p>Submit assignments via GitHub links, file attachments, and live demo URLs with rubric-grounded mentor evaluation.</p>
+        </article>
+
+        <!-- Feature 4 -->
+        <article class="card">
+          <div class="card-icon"><i class="fa-solid fa-chart-line"></i></div>
+          <h3>Automated Gradebook</h3>
+          <p>Transparent weighted grade calculations factoring in class attendance, practical tasks, midterm exams, and capstones.</p>
+        </article>
+
+        <!-- Feature 5 -->
+        <article class="card">
+          <div class="card-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <h3>Proctored Exam Engine</h3>
+          <p>Secure online multiple-choice exam system equipped with anti-cheat detection, countdown timers, and instant grading.</p>
+        </article>
+
+        <!-- Feature 6 -->
+        <article class="card">
+          <div class="card-icon"><i class="fa-solid fa-award"></i></div>
+          <h3>Verified Certificates</h3>
+          <p>Earn digitally signed certificates of completion equipped with public verification links and QR codes for employers.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 URJIKO Labs Training Management System. Built for Internet Programming Portfolio Showcase.</p>
+    </div>
+  </footer>
+
 </body>
 </html>

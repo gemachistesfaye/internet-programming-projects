@@ -1,39 +1,301 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>📇 </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Internet Programming Practicum & Lab Showcase</title>
+  <link rel="stylesheet" href="../CSS/style1.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    
-    <header>  
-        <nav>   NavBar </nav>
-      <div class="banner"> Banner </div>
-      
-   </header>
 
-  
-    <main>
-        
-        <section> Left Section </section>
-        <section> Center Section </section>
-        <section> Right Section </section>  
+  <!-- Top Sticky Workbench Navigation -->
+  <header class="workbench-header">
+    <div class="workbench-nav">
+      <div class="brand-badge">
+        <div class="brand-icon">
+          <i class="fa-solid fa-flask-vial"></i>
+        </div>
+        <div class="brand-text">
+          <h1>IP Practicum Lab</h1>
+          <span>Department of Information Science &bull; HU</span>
+        </div>
+      </div>
 
+      <nav class="workbench-links">
+        <a href="../../index.html" class="nav-item">
+          <i class="fa-solid fa-layer-group"></i> Portfolio Root
+        </a>
+        <a href="../../01-ip-project/Frontend/Pages/landing_page.html" class="nav-item">
+          <i class="fa-solid fa-graduation-cap"></i> LMS Portal
+        </a>
+        <a href="../../03-haramaya-health-campus/pages/home.html" class="nav-item">
+          <i class="fa-solid fa-hospital"></i> Health Campus
+        </a>
+        <span class="pill-lab">Lab Suite 2026</span>
+      </nav>
+    </div>
+  </header>
 
+  <main class="workbench-container">
+    <!-- Hero Banner -->
+    <section class="lab-hero">
+      <div class="hero-meta">
+        <span class="tag-sem">IT-2016-ACAD</span>
+        <span class="tag-sem">CURRICULUM LABS</span>
+      </div>
+      <h2>Internet Programming Component Workbench</h2>
+      <p>
+        An interactive laboratory environment demonstrating fundamental front-end architecture: semantic HTML5 structures, accessible form controls, responsive CSS grid/flexbox layouts, tabular data presentations, and HTML5 multimedia integration.
+      </p>
+      <div class="hero-actions">
+        <a href="#lab-grid" class="btn btn-primary">
+          <i class="fa-solid fa-compass"></i> Explore Exercises
+        </a>
+        <a href="#interactive-sandbox" class="btn btn-ghost-light">
+          <i class="fa-solid fa-play"></i> Live Component Sandbox
+        </a>
+      </div>
+    </section>
 
-      
+    <!-- Lab Modules Grid -->
+    <div class="section-title" id="lab-grid">
+      <div>
+        <h3>Laboratory Exercise Directory</h3>
+        <p>Curated front-end modules authored during the semester</p>
+      </div>
+    </div>
 
-    </main>
+    <div class="labs-grid">
+      <!-- Card 1: Data Tables -->
+      <div class="lab-card">
+        <div class="lab-card-top">
+          <div class="card-icon blue">
+            <i class="fa-solid fa-table"></i>
+          </div>
+          <span class="lab-badge">Lab 01</span>
+        </div>
+        <h4>Data Tables & Schedules</h4>
+        <p>Accessible multi-column student matriculation records and performance gradebooks with alternating row hover and responsive wrapping.</p>
+        <div class="lab-card-footer">
+          <span class="font-mono">table.html</span>
+          <a href="table.html">Open Lab <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
 
-    <footer>
-        <a href="https://www.facebook.com">Facebook</a>
-        <a href="https://www.twitter.com">Twitter</a>
-        <a href="https://www.instagram.com">Instagram</a>
-        <a href="https://www.telegram.com">Telegram</a>
-        <a href="https://www.youtube.com">Youtube</a>
-    </footer>
+      <!-- Card 2: Student Registration Form -->
+      <div class="lab-card">
+        <div class="lab-card-top">
+          <div class="card-icon green">
+            <i class="fa-solid fa-user-plus"></i>
+          </div>
+          <span class="lab-badge">Lab 02</span>
+        </div>
+        <h4>Student Registration Controls</h4>
+        <p>Comprehensive enrollment form with ID validation, radio option sets, department dropdown selectors, and descriptive textarea notes.</p>
+        <div class="lab-card-footer">
+          <span class="font-mono">register_student.html</span>
+          <a href="register_student.html">Open Lab <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
 
+      <!-- Card 3: Multimedia & Graphics -->
+      <div class="lab-card">
+        <div class="lab-card-top">
+          <div class="card-icon violet">
+            <i class="fa-solid fa-photo-film"></i>
+          </div>
+          <span class="lab-badge">Lab 03</span>
+        </div>
+        <h4>Multimedia Streaming & Assets</h4>
+        <p>HTML5 video player embedding local development guides, native audio music player, and external institutional links.</p>
+        <div class="lab-card-footer">
+          <span class="font-mono">graphics.html</span>
+          <a href="graphics.html">Open Lab <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
 
+      <!-- Card 4: CSS Layout Systems -->
+      <div class="lab-card">
+        <div class="lab-card-top">
+          <div class="card-icon orange">
+            <i class="fa-solid fa-table-cells-large"></i>
+          </div>
+          <span class="lab-badge">Lab 04</span>
+        </div>
+        <h4>Semantic Layouts & Bio</h4>
+        <p>Modern structural layout with header branding, multi-column side navigation, and author contact card.</p>
+        <div class="lab-card-footer">
+          <span class="font-mono">pagelayout.html</span>
+          <a href="pagelayout.html">Open Lab <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- Card 5: CSS Stylesheet Integration -->
+      <div class="lab-card">
+        <div class="lab-card-top">
+          <div class="card-icon blue">
+            <i class="fa-solid fa-palette"></i>
+          </div>
+          <span class="lab-badge">Lab 05</span>
+        </div>
+        <h4>CSS Styling Techniques</h4>
+        <p>Demonstrations of inline styles, internal `<style>` tags, external stylesheet linking, and typographic hierarchy.</p>
+        <div class="lab-card-footer">
+          <span class="font-mono">apply_css.html</span>
+          <a href="apply_css.html">Open Lab <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- Card 6: Account Creation & Authentication -->
+      <div class="lab-card">
+        <div class="lab-card-top">
+          <div class="card-icon green">
+            <i class="fa-solid fa-key"></i>
+          </div>
+          <span class="lab-badge">Lab 06</span>
+        </div>
+        <h4>Account Provisioning & Auth</h4>
+        <p>User credentials registration, password constraints, and login screen interface designs.</p>
+        <div class="lab-card-footer">
+          <span class="font-mono">create_account.html</span>
+          <a href="create_account.html">Open Lab <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Live Interactive Sandbox Section -->
+    <div class="section-title" id="interactive-sandbox">
+      <div>
+        <h3>Live Component Sandbox</h3>
+        <p>Direct preview of engineered UI elements</p>
+      </div>
+    </div>
+
+    <div class="sandbox-panel">
+      <div class="sandbox-header">
+        <div class="sandbox-tabs">
+          <button class="sandbox-tab active" onclick="switchSandboxTab('tab-table', this)">
+            <i class="fa-solid fa-table"></i> Table Component
+          </button>
+          <button class="sandbox-tab" onclick="switchSandboxTab('tab-media', this)">
+            <i class="fa-solid fa-play"></i> Media Player
+          </button>
+          <button class="sandbox-tab" onclick="switchSandboxTab('tab-form', this)">
+            <i class="fa-solid fa-input-text"></i> Form Snippet
+          </button>
+        </div>
+        <span class="font-mono text-muted" style="font-size: 0.8rem;">component-spec: v2.4</span>
+      </div>
+
+      <div class="sandbox-content">
+        <!-- Tab 1: Table -->
+        <div class="sandbox-view active" id="tab-table">
+          <div class="modern-table-container">
+            <table class="modern-table">
+              <caption>Department of Information Science &mdash; Top Honor Matriculates</caption>
+              <thead>
+                <tr>
+                  <th>#SN</th>
+                  <th>Student ID</th>
+                  <th>Full Name</th>
+                  <th>Major Program</th>
+                  <th>Semester GPA</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>01</td>
+                  <td><strong class="font-mono">1381/16</strong></td>
+                  <td>Gemachis Tesfaye</td>
+                  <td>Information Science</td>
+                  <td><strong>3.94</strong></td>
+                  <td><span class="pill-lab" style="background:#d1fae5; color:#065f46;">Dean's List</span></td>
+                </tr>
+                <tr>
+                  <td>02</td>
+                  <td><strong class="font-mono">1245/16</strong></td>
+                  <td>Abebe Kebede</td>
+                  <td>Software Engineering</td>
+                  <td><strong>3.88</strong></td>
+                  <td><span class="pill-lab" style="background:#d1fae5; color:#065f46;">Honors</span></td>
+                </tr>
+                <tr>
+                  <td>03</td>
+                  <td><strong class="font-mono">1402/16</strong></td>
+                  <td>Bontu Desta</td>
+                  <td>Computer Science</td>
+                  <td><strong>3.91</strong></td>
+                  <td><span class="pill-lab" style="background:#d1fae5; color:#065f46;">Dean's List</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Tab 2: Media -->
+        <div class="sandbox-view" id="tab-media">
+          <div class="media-grid">
+            <div class="media-card">
+              <h4><i class="fa-solid fa-video"></i> Video Tutorial: Dev Setup</h4>
+              <p style="color: var(--lab-text-muted); font-size: 0.85rem; margin-bottom: 0.5rem;">Visual Studio Code & Virtualization Environment Setup Guide</p>
+              <video controls poster="../Images/111.jpg">
+                <source src="../Video/How_To_Download_and_install_Visual_studio_code_ቪዥዋል_ስቱዲዮ_ኮድን_እን.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+              </video>
+            </div>
+
+            <div class="media-card">
+              <h4><i class="fa-solid fa-music"></i> Audio Asset: Campus Playlist</h4>
+              <p style="color: var(--lab-text-muted); font-size: 0.85rem; margin-bottom: 0.5rem;">Naol Bula &bull; Afan Oromo Cultural Audio Track</p>
+              <audio controls style="margin-top: 1.25rem;">
+                <source src="../Audio/Naol_Bula_Soortuu_Qalbii_New_Ethiopian_Afan_Oromo_Music_Vide.m4a" type="audio/mp4">
+                Your browser does not support HTML5 audio.
+              </audio>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 3: Form -->
+        <div class="sandbox-view" id="tab-form">
+          <div style="max-width: 500px; margin: 0 auto; background: #f8fafc; padding: 1.5rem; border-radius: 8px; border: 1px solid var(--lab-border);">
+            <h4 style="margin-bottom: 1rem;"><i class="fa-solid fa-user-check"></i> Quick Registration Test</h4>
+            <div style="margin-bottom: 1rem;">
+              <label style="display:block; font-size:0.85rem; font-weight:600; margin-bottom:0.3rem;">Matriculation ID</label>
+              <input type="text" value="1381/16" readonly style="width:100%; padding:0.5rem; border:1px solid var(--lab-border); border-radius:4px; font-family:'JetBrains Mono',monospace;">
+            </div>
+            <div style="margin-bottom: 1rem;">
+              <label style="display:block; font-size:0.85rem; font-weight:600; margin-bottom:0.3rem;">Department</label>
+              <select style="width:100%; padding:0.5rem; border:1px solid var(--lab-border); border-radius:4px;">
+                <option>Information Science</option>
+                <option>Software Engineering</option>
+                <option>Computer Science</option>
+              </select>
+            </div>
+            <a href="register_student.html" class="btn btn-primary" style="width:100%; justify-content:center;">Open Full Registration Lab</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="workbench-footer">
+    <p>
+      &copy; 2026 Internet Programming Practicum &bull; Haramaya University Department of Information Science.
+    </p>
+    <p style="margin-top: 0.5rem;">
+      Authored by <a href="https://github.com/gemachistesfaye" target="_blank">Gemachis Tesfaye</a> &bull; Portfolio Repository: <a href="https://github.com/gemachistesfaye/internet-programming-projects" target="_blank">internet-programming-projects</a>
+    </p>
+  </footer>
+
+  <script>
+    function switchSandboxTab(tabId, el) {
+      document.querySelectorAll('.sandbox-tab').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.sandbox-view').forEach(v => v.classList.remove('active'));
+      el.classList.add('active');
+      document.getElementById(tabId).classList.add('active');
+    }
+  </script>
 </body>
 </html>

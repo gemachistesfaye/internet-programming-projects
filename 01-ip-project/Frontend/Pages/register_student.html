@@ -1,78 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page layeout</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration | URJIKO Learning Management</title>
+  <link rel="stylesheet" href="../CSS/style1.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    
-    <table  width="100%" height="460">
 
-        <tr>
-            <td colspan="3">
-                <img src="../Images/haramaya-logo-1.png" alt="">
-            </td>
-            
-        </tr>
+  <!-- Top Navigation Header -->
+  <header class="main-header">
+    <div class="header-left">
+      <a href="landing_page.html" class="logo">
+        <i class="fa-solid fa-graduation-cap"></i>
+        <span>URJIKO <strong>LMS</strong></span>
+      </a>
+      <span class="badge">Student Enrollment</span>
+    </div>
 
-        <tr height="200">
-           <td width="20%"> <h2>Pages</h2> <br>
-               <h3><a href="../Pages/pagelayout.html">Home</a></h3>  <br>
-                <h3><a href="../Pages/table.html">Table list</a></h3> <br>
-                <h3><a href="../Pages/list.html">List</a></h3> <br>
-                <h3><a href="../Pages/create_account.html">Create Account</a></h3>  <br>
-                <h3><a href="../Pages/register_student.html">Register Student</a></h3>  <br>
-            </td>
-            <td>  <h1> Student Registration</h1>
-    <form>
+    <nav class="nav-links">
+      <a href="landing_page.html"><i class="fa-solid fa-house"></i> Home</a>
+      <a href="Index.html"><i class="fa-solid fa-gauge"></i> Portal Dashboard</a>
+      <a href="Login.html"><i class="fa-solid fa-right-to-bracket"></i> Sign In</a>
+    </nav>
+  </header>
 
-         <label for="">ID Number</label>
-        <input type="text" value="1381/16" readonly> <br> <br>
-        <label for="">First name</label>
-        <input type="text" placeholder="your name"> <br> <br>
-         <label for="">age</label>
-        <input type="number" max="60" placeholder="your age"> <br> <br>
-         <label for="">Gender   </label>
-        male<input type="radio">  female<input type="radio"><br> <br>
+  <!-- Page Content Container -->
+  <main class="page-container form-page-container">
+    <div class="registration-header">
+      <a href="landing_page.html" class="back-link">
+        <i class="fa-solid fa-arrow-left"></i> Return to Programs
+      </a>
+      <h1>Official Student Registration</h1>
+      <p>Enroll for the 2026/2027 Academic Semester in Computing, Informatics & Technology.</p>
+    </div>
 
-        <label for="">Department:</label>
-        <select>
-            <option selected disabled value ="">Select department</option>
-            <option value="">Information Scence</option>
-            <option value="">Information Technology</option>
-            <option value="">Information System</option>
-            <option value="">Software Enginering</option>
-            <option value="">Computer Science</option>
-        </select> <br> <br>
+    <div class="form-card-container">
+      <form id="studentRegistrationForm" class="registration-form" onsubmit="submitRegistration(event)">
+        
+        <!-- Section 1: Identification & Personal Info -->
+        <div class="form-section">
+          <div class="section-badge">
+            <span class="step-num">01</span>
+            <div>
+              <h3>Personal & Academic Identification</h3>
+              <p>Institutional record information</p>
+            </div>
+          </div>
 
-        <label for="">Comment</label>
-        <textarea> Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis odit rerum veritatis 
-            assumenda tenetur! Consequuntur, quas! Commodi officiis magnam ut debitis, numquam, optio et 
-            nemo facilis consequuntur harum officia natus.</textarea>  <br> <br>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="studentId">Institutional ID Number <span class="required">*</span></label>
+              <div class="input-with-icon">
+                <i class="fa-solid fa-id-card"></i>
+                <input type="text" id="studentId" name="studentId" value="1381/16" required>
+              </div>
+              <small class="field-hint">Assigned campus matriculation number</small>
+            </div>
 
-    
+            <div class="form-group">
+              <label for="fullName">Full Name <span class="required">*</span></label>
+              <div class="input-with-icon">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" id="fullName" name="fullName" placeholder="e.g. Gemachis Tesfaye" required>
+              </div>
+            </div>
 
-    </form>
-                    
-            </td>
-            <td width="20%">
-                <h2>Social Media</h2> <br>
-               <h3><a href="www.facebook.com">Facebook</a></h3>  <br>
-                <h3><a href="www.instagram.com">Instagram</a></h3> <br>
-                <h3><a href="wwww.telegram.com">Telegram</a></h3> <br>
-                <h3><a href="www.youtube.com">Youtube</a></h3>  <br>
-                <h3><a href="www.linkedin.com">Linkedin</a></h3>  <br>
-            </td>
-        </tr>
+            <div class="form-group">
+              <label for="email">Institutional Email <span class="required">*</span></label>
+              <div class="input-with-icon">
+                <i class="fa-solid fa-envelope"></i>
+                <input type="email" id="email" name="email" placeholder="student@haramaya.edu.et" required>
+              </div>
+            </div>
 
-        <tr>
-            <td colspan="3" >
-                <p align="center"> All &copy; 2016 Information Science at Haramaya University</p>
-            </td> 
-        </tr>
+            <div class="form-group">
+              <label for="phone">Phone Number <span class="required">*</span></label>
+              <div class="input-with-icon">
+                <i class="fa-solid fa-phone"></i>
+                <input type="tel" id="phone" name="phone" placeholder="+251 9XX XXX XXX" required>
+              </div>
+            </div>
 
+            <div class="form-group">
+              <label for="age">Age</label>
+              <div class="input-with-icon">
+                <i class="fa-solid fa-cake-candles"></i>
+                <input type="number" id="age" name="age" min="16" max="65" value="21" placeholder="Your age">
+              </div>
+            </div>
 
-    </table>
+            <div class="form-group">
+              <label>Gender <span class="required">*</span></label>
+              <div class="radio-group-container">
+                <label class="radio-label">
+                  <input type="radio" name="gender" value="male" checked>
+                  <span class="radio-custom"></span> Male
+                </label>
+                <label class="radio-label">
+                  <input type="radio" name="gender" value="female">
+                  <span class="radio-custom"></span> Female
+                </label>
+                <label class="radio-label">
+                  <input type="radio" name="gender" value="prefer_not">
+                  <span class="radio-custom"></span> Other
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 2: Department & Program Selection -->
+        <div class="form-section">
+          <div class="section-badge">
+            <span class="step-num">02</span>
+            <div>
+              <h3>Department & Enrollment Track</h3>
+              <p>Select your major study program</p>
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-group full-width">
+              <label for="department">Academic Department <span class="required">*</span></label>
+              <div class="input-with-icon">
+                <i class="fa-solid fa-building-columns"></i>
+                <select id="department" name="department" required>
+                  <option value="" disabled>Select Department</option>
+                  <option value="Information Science" selected>Department of Information Science</option>
+                  <option value="Software Engineering">Department of Software Engineering</option>
+                  <option value="Computer Science">Department of Computer Science</option>
+                  <option value="Information Technology">Department of Information Technology</option>
+                  <option value="Information Systems">Department of Information Systems</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group full-width">
+              <label for="comment">Enrollment Statement or Comments</label>
+              <textarea id="comment" name="comment" rows="4" placeholder="Briefly describe your academic background, areas of technical interest, or lab group preferences..."></textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form Action Buttons -->
+        <div class="form-actions">
+          <button type="reset" class="btn btn-secondary">
+            <i class="fa-solid fa-rotate-left"></i> Reset Form
+          </button>
+          <button type="submit" class="btn btn-primary">
+            <i class="fa-solid fa-check"></i> Complete Student Registration
+          </button>
+        </div>
+      </form>
+
+      <!-- Confirmation Toast Modal -->
+      <div id="successNotice" class="success-notice" style="display: none;">
+        <div class="success-icon">
+          <i class="fa-solid fa-circle-check"></i>
+        </div>
+        <div class="success-text">
+          <h3>Registration Successful!</h3>
+          <p>Matriculation verified. Redirecting you to the student portal dashboard...</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="footer-bottom">
+      <p>&copy; 2026 URJIKO Learning Management & Haramaya University Information Science. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="landing_page.html">Home</a>
+        <a href="Index.html">Dashboard</a>
+        <a href="Login.html">Sign In</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function submitRegistration(e) {
+      e.preventDefault();
+      const form = document.getElementById('studentRegistrationForm');
+      const notice = document.getElementById('successNotice');
+      
+      notice.style.display = 'flex';
+      form.style.opacity = '0.5';
+      form.style.pointerEvents = 'none';
+
+      setTimeout(() => {
+        window.location.href = 'Index.html';
+      }, 1500);
+    }
+  </script>
 </body>
 </html>

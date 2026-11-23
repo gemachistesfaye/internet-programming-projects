@@ -1,71 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page layeout</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layout Systems & Contact | IP Practicum Lab</title>
+  <link rel="stylesheet" href="../CSS/style1.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    
-    <table  width="100%" height="460">
 
-        <tr>
-            <td colspan="3">
-                <img src="../Images/haramaya-logo-1.png" alt="">
-            </td>
-            
-        </tr>
+  <header class="workbench-header">
+    <div class="workbench-nav">
+      <div class="brand-badge">
+        <a href="Index.html" class="nav-item" style="color:var(--lab-dark); font-weight:700;">
+          <i class="fa-solid fa-arrow-left"></i> Return to Lab Workbench
+        </a>
+      </div>
+      <div class="workbench-links">
+        <span class="pill-lab">Lab 04 &bull; Layout Systems</span>
+      </div>
+    </div>
+  </header>
 
-        <tr height="200">
-            <td width="20%"> <h2>Pages</h2> <br>
-               <h3><a href="../Pages/pagelayout.html">Home</a></h3>  <br>
-                <h3><a href="../Pages/table.html">Table list</a></h3> <br>
-                <h3><a href="../Pages/list.html">List</a></h3> <br>
-                <h3><a href="../Pages/create_account.html">Create Account</a></h3>  <br>
-                <h3><a href="../Pages/register_student.html">Register Student</a></h3>  <br>
-            </td>
-            <td> <h1>About Us</h1>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus 
-                    veritatis voluptatum, omnis amet corrupti possimus asperiores nobis! 
-                    Vero numquam, veniam illum fuga eius repellendus vel quidem cumque, 
-                    obcaecati rem tenetur. Lorem ipsum dolor sit amet consectetur 
-                    adipisicing elit. Quas ab minus quae molestiae nobis velit debitis magni 
-                    ipsa natus! Ea fugiat voluptatum doloribus quaerat repudiandae repellendus laborum 
-                    modi eum voluptatibus!</p> <br>
+  <main class="workbench-container">
+    <div style="margin-bottom: 2rem;">
+      <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--lab-dark);">Semantic Page Layout & Author Profile</h2>
+      <p style="color: var(--lab-text-muted);">Comparative structural layout demonstrating sidebar navigation, main content flow, and responsive flex wrapping.</p>
+    </div>
 
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit nihil aut 
-                    possimus rerum, cupiditate inventore ipsam nulla non molestias perferendis 
-                    illum excepturi, adipisci officiis tempore explicabo iusto odio quae ex. 
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis, pariatur 
-                    eaque autem error aperiam quibusdam itaque id, nisi neque nemo, praesentium 
-                    fuga voluptatibus provident! Excepturi suscipit in expedita. Repellat, aspernatur.</p> <br>
+    <div style="display: grid; grid-template-columns: 240px 1fr; gap: 2rem; background: white; border: 1px solid var(--lab-border); border-radius: var(--radius-md); padding: 2rem;">
+      <!-- Sidebar -->
+      <aside style="border-right: 1px solid var(--lab-border); padding-right: 1.5rem;">
+        <h4 style="font-size: 0.95rem; font-weight: 700; margin-bottom: 1rem; color: var(--lab-dark); text-transform: uppercase; letter-spacing: 0.5px;">Navigation</h4>
+        <nav style="display: flex; flex-direction: column; gap: 0.6rem;">
+          <a href="Index.html" class="nav-item"><i class="fa-solid fa-house"></i> Lab Home</a>
+          <a href="table.html" class="nav-item"><i class="fa-solid fa-table"></i> Table List</a>
+          <a href="graphics.html" class="nav-item"><i class="fa-solid fa-photo-film"></i> Media Gallery</a>
+          <a href="register_student.html" class="nav-item"><i class="fa-solid fa-user-plus"></i> Register Student</a>
+          <a href="create_account.html" class="nav-item"><i class="fa-solid fa-key"></i> Create Account</a>
+        </nav>
 
+        <h4 style="font-size: 0.95rem; font-weight: 700; margin: 2rem 0 1rem; color: var(--lab-dark); text-transform: uppercase; letter-spacing: 0.5px;">Author Profiles</h4>
+        <div style="display: flex; flex-direction: column; gap: 0.6rem;">
+          <a href="https://github.com/gemachistesfaye" target="_blank" class="nav-item"><i class="fa-brands fa-github"></i> GitHub</a>
+          <a href="https://www.linkedin.com/in/gemachis-tesfaye" target="_blank" class="nav-item"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+          <a href="mailto:gemachistesfaye36@gmail.com" class="nav-item"><i class="fa-solid fa-envelope"></i> Email Contact</a>
+        </div>
+      </aside>
 
-                    <hr>
-                    <h2>Contact Us</h2>
-                    <a href="mailto:gemachistesfaye36@gmail.com"> Email:gemachistesfaye36@gmail.com</a> <br>
-                    <a href="https://github.com/urjiiko1">Github</a>  <br>
-                    <a href="https://www.linkedin.com/in/gemachis-tesfaye"> Linkedin</a>
-                    
-                    
-            </td>
-            <td width="20%">
-                <h2>Social Media</h2> <br>
-               <h3><a href="www.facebook.com">Facebook</a></h3>  <br>
-                <h3><a href="www.instagram.com">Instagram</a></h3> <br>
-                <h3><a href="wwww.telegram.com">Telegram</a></h3> <br>
-                <h3><a href="www.youtube.com">Youtube</a></h3>  <br>
-                <h3><a href="www.linkedin.com">Linkedin</a></h3>  <br>
-            </td>
-        </tr>
+      <!-- Main Column -->
+      <article>
+        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+          <img src="../Images/haramaya-logo-1.png" alt="HU Logo" style="height: 52px; object-fit: contain;">
+          <div>
+            <h3 style="font-size: 1.3rem; font-weight: 700; color: var(--lab-dark);">Haramaya University &bull; Information Science</h3>
+            <p style="color: var(--lab-text-muted); font-size: 0.85rem;">Course: Internet Programming Practicum</p>
+          </div>
+        </div>
 
-        <tr>
-            <td colspan="3" >
-                <p align="center"> All &copy; 2016 Information Science at Haramaya University</p>
-            </td> 
-        </tr>
+        <h4 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.75rem;">Coursework Overview & Academic Focus</h4>
+        <p style="color: var(--lab-text-muted); line-height: 1.7; margin-bottom: 1.25rem;">
+          This practicum project portfolio tracks laboratory implementations undertaken as part of the Information Science curriculum. Exercises span from elementary structural markup to modern responsive design systems, API-driven interactions, and component-based styling paradigms.
+        </p>
 
+        <p style="color: var(--lab-text-muted); line-height: 1.7; margin-bottom: 1.5rem;">
+          The curriculum emphasizes accessible digital experiences, robust DOM manipulation, standards-compliant HTML5 semantic architecture, and responsive layouts capable of seamless rendering across mobile, tablet, and desktop viewports.
+        </p>
 
-    </table>
+        <div style="background: #f8fafc; border-left: 4px solid var(--lab-primary); padding: 1.25rem; border-radius: 4px;">
+          <h5 style="font-weight: 700; margin-bottom: 0.35rem; color: var(--lab-dark);">Practicum Verification</h5>
+          <p style="font-size: 0.88rem; color: var(--lab-text-muted);">
+            Author: <strong>Gemachis Tesfaye</strong> &bull; Matriculation ID: <span class="font-mono">1381/16</span><br>
+            Department of Information Science, College of Computing and Informatics.
+          </p>
+        </div>
+      </article>
+    </div>
+
+    <div style="margin-top: 2rem; display: flex; justify-content: space-between; align-items: center;">
+      <a href="Index.html" class="btn btn-outline"><i class="fa-solid fa-arrow-left"></i> Back to Exercises</a>
+      <a href="../../index.html" class="btn btn-primary"><i class="fa-solid fa-layer-group"></i> Main Portfolio Root</a>
+    </div>
+  </main>
+
+  <footer class="workbench-footer">
+    <p>&copy; 2026 Internet Programming Practicum &bull; Haramaya University</p>
+  </footer>
 </body>
 </html>

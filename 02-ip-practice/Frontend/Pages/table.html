@@ -1,73 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page layeout</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Tables & Roster | IP Practicum Lab</title>
+  <link rel="stylesheet" href="../CSS/style1.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    
-    <table  width="100%" height="460">
 
-        <tr>
-            <td colspan="3">
-                <img src="../Images/haramaya-logo-1.png" alt="">
-            </td>
-            
-        </tr>
+  <header class="workbench-header">
+    <div class="workbench-nav">
+      <div class="brand-badge">
+        <a href="Index.html" class="nav-item" style="color:var(--lab-dark); font-weight:700;">
+          <i class="fa-solid fa-arrow-left"></i> Return to Lab Workbench
+        </a>
+      </div>
+      <div class="workbench-links">
+        <span class="pill-lab">Lab 01 &bull; Tabular Data</span>
+      </div>
+    </div>
+  </header>
 
-        <tr height="200">
-            <td width="20%"> <h2>Pages</h2> <br>
-               <h3><a href="../Pages/pagelayout.html">Home</a></h3>  <br>
-                <h3><a href="../Pages/table.html">Table list</a></h3> <br>
-                <h3><a href="../Pages/list.html">List</a></h3> <br>
-                <h3><a href="../Pages/create_account.html">Create Account</a></h3>  <br>
-                <h3><a href="../Pages/register_student.html">Register Student</a></h3>  <br>
-            </td>
-            <td> < <h1> Table in HTML</h1>
+  <main class="workbench-container">
+    <div style="margin-bottom: 2rem;">
+      <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--lab-dark);">HTML5 Tabular Data Structures</h2>
+      <p style="color: var(--lab-text-muted);">Demonstration of semantic table headers, captions, row groups (thead, tbody, tfoot), and responsive presentation.</p>
+    </div>
 
-    <table border="1" width="100%">
-        <caption>Student List</caption>
-      <tr>
-        <th>#SN</th>
-        <th> ID Number</th>
-        <th> First Name</th>
-        <th> Last Name</th>
-       </tr>
+    <div class="modern-table-container">
+      <table class="modern-table">
+        <caption>Department of Information Science &mdash; Student Gradebook & Matriculation Records</caption>
+        <thead>
+          <tr>
+            <th>#SN</th>
+            <th>Matriculation ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Department</th>
+            <th>Credits Completed</th>
+            <th>Semester GPA</th>
+            <th>Academic Standing</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td><strong class="font-mono">1381/16</strong></td>
+            <td>Gemachis</td>
+            <td>Tesfaye</td>
+            <td>Information Science</td>
+            <td>64 ECTS</td>
+            <td><strong>3.94</strong></td>
+            <td><span class="pill-lab" style="background:#d1fae5; color:#065f46;">Dean's List</span></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><strong class="font-mono">1245/16</strong></td>
+            <td>Abebe</td>
+            <td>Kebede</td>
+            <td>Software Engineering</td>
+            <td>62 ECTS</td>
+            <td><strong>3.88</strong></td>
+            <td><span class="pill-lab" style="background:#d1fae5; color:#065f46;">Honors</span></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td><strong class="font-mono">1402/16</strong></td>
+            <td>Bontu</td>
+            <td>Desta</td>
+            <td>Computer Science</td>
+            <td>64 ECTS</td>
+            <td><strong>3.91</strong></td>
+            <td><span class="pill-lab" style="background:#d1fae5; color:#065f46;">Dean's List</span></td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td><strong class="font-mono">1190/16</strong></td>
+            <td>Chala</td>
+            <td>Gudeta</td>
+            <td>Information Technology</td>
+            <td>60 ECTS</td>
+            <td><strong>3.65</strong></td>
+            <td><span class="pill-lab" style="background:#e0f2fe; color:#0369a1;">Good Standing</span></td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td><strong class="font-mono">1312/16</strong></td>
+            <td>Hawine</td>
+            <td>Tolosa</td>
+            <td>Information Systems</td>
+            <td>62 ECTS</td>
+            <td><strong>3.78</strong></td>
+            <td><span class="pill-lab" style="background:#d1fae5; color:#065f46;">Honors</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
-       <tr>
-        <td>1</td>
-        <td>1381/16</td>
-        <td>Gemachis</td>
-        <td> Tesfaye</td>
-       </tr>
+    <div style="margin-top: 2rem; display: flex; justify-content: space-between; align-items: center;">
+      <a href="Index.html" class="btn btn-outline"><i class="fa-solid fa-arrow-left"></i> Back to Exercises</a>
+      <a href="register_student.html" class="btn btn-primary">Next Lab: Form Controls <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </main>
 
-       <tr>
-        <td>2</td>
-        <td>1245/16</td>
-        <td>Abebe</td>
-        <td>Kebede</td>
-       </tr>
-
-    </table>
-            </td>
-            <td width="20%">
-                <h2>Social Media</h2> <br>
-               <h3><a href="www.facebook.com">Facebook</a></h3>  <br>
-                <h3><a href="www.instagram.com">Instagram</a></h3> <br>
-                <h3><a href="wwww.telegram.com">Telegram</a></h3> <br>
-                <h3><a href="www.youtube.com">Youtube</a></h3>  <br>
-                <h3><a href="www.linkedin.com">Linkedin</a></h3>  <br>
-            </td>
-        </tr>
-
-        <tr>
-            <td colspan="3" >
-                <p align="center"> All &copy; 2016 Information Science at Haramaya University</p>
-            </td> 
-        </tr>
-
-
-    </table>
+  <footer class="workbench-footer">
+    <p>&copy; 2026 Internet Programming Practicum &bull; Haramaya University</p>
+  </footer>
 </body>
 </html>

@@ -3,178 +3,131 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Health Research | Haramaya Health Campus</title>
-  <link rel="stylesheet" href="../css/research.css">
+  <title>Biomedical & Clinical Research | Haramaya Health Campus</title>
   <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
- 
-   <!-- TOPBAR (row 1) -->
-  <header class="topbar">
 
-    <!-- left: small logo -->
-    <a class="logo-box" href="home.html">
-      <img class="logo-img" src="../images/logo.png" alt="Harar Health Campus logo">
-      <div class="logo-info">
-        <h3>Harar Health Campus</h3>
+  <!-- Top Utility Bar -->
+  <div class="top-utility">
+    <div class="container top-utility-inner">
+      <div class="utility-contact">
+        <span class="utility-item"><i class="fa-solid fa-location-dot"></i> Harar Campus, Ethiopia</span>
+        <span class="utility-item"><i class="fa-solid fa-phone"></i> +251 25 666 0612</span>
+        <span class="utility-item"><i class="fa-solid fa-envelope"></i> contact@haramaya.edu.et</span>
       </div>
-    </a>
-
-    <!-- center: contact items -->
-    <div class="top-contact">
-      <span class="top-item"><i class="fa-solid fa-location-dot"></i> Harar</span>
-      <span class="top-item"><i class="fa-solid fa-phone"></i> +251 XXX XXX</span>
-      <span class="top-item"><i class="fa-solid fa-envelope"></i> info@harar.edu</span>
+      <div class="utility-links">
+        <a href="home.html" class="utility-link">Home</a>
+        <a href="about.html" class="utility-link">About Campus</a>
+        <a href="courses.html" class="utility-link">Academics</a>
+        <a href="../docs/haramaya-brochure.pdf" class="utility-link" download><i class="fa-solid fa-file-pdf"></i> Brochure</a>
+      </div>
     </div>
+  </div>
 
-    <!-- right: search, theme, hamburger -->
-    <div class="top-actions">
-      <div class="search-top">
-        <input id="searchInput" type="search" placeholder="Search courses..." aria-label="Search courses">
-        <button id="searchBtn" aria-label="Search"><i class="fa fa-search"></i></button>
-      </div>
+  <!-- Main Navigation Header -->
+  <header class="main-header">
+    <div class="container header-inner">
+      <a href="home.html" class="brand-box">
+        <img src="../images/logo.png" alt="Haramaya University Crest" class="brand-logo">
+        <div class="brand-text">
+          <h1>Haramaya University</h1>
+          <span>College of Health & Medical Sciences</span>
+        </div>
+      </a>
 
-      <button id="theme-toggle" class="icon-circle" aria-label="Toggle theme">
-        <i id="theme-icon" class="fa-solid fa-sun"></i>
+      <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars"></i>
       </button>
 
-      <button id="hamburger" class="hamburger" aria-label="Open menu">
-        <span></span><span></span><span></span>
-      </button>
+      <nav class="main-nav" id="mainNav">
+        <a href="home.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="courses.html" class="nav-link">Programs & Courses</a>
+        <a href="research.html" class="nav-link active">Research</a>
+        <a href="home.html#campus-map" class="nav-link">Campus Map</a>
+        <a href="courses.html" class="nav-btn"><i class="fa-solid fa-graduation-cap"></i> Apply Now</a>
+      </nav>
     </div>
   </header>
 
-  <!-- MAIN NAVBAR (row 2) - SPLIT LAYOUT -->
-  <nav class="main-nav container" role="navigation">
-    <ul class="menu left" id="menu-left">
-      <li><a href="home.html">Home</a></li>
-      <li><a href="courses.html">Courses</a></li>
-    </ul>
-
-    <ul class="menu right" id="menu-right">
-      <li><a href="research.html">Health Research</a></li>
-      <li><a href="about.html">About</a></li>
-    </ul>
-  </nav>
-
-
-<section class="hero">
-  <h1>Health Research at <span>Haramaya</span></h1>
-  <p>Community-based research improving health outcomes in Harar, Ethiopia and beyond.</p>
-</section>
-
-<section class="research-areas">
-  <h2>Research Focus Areas</h2>
-
-  <div class="cards">
-    
-    <!-- Communicable -->
-    <div class="r-card">
-      <i class="fa-solid fa-virus-covid"></i>
-      <h3>Communicable Diseases</h3>
-      <p>TB, Malaria, HIV, Hepatitis, Vaccine research.</p>
-      <button class="view-details" data-modal="modal1">View Details</button>
+  <!-- Page Banner -->
+  <section class="hero-section" style="padding: 3.5rem 0 4rem;">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-pill"><i class="fa-solid fa-flask"></i> Scientific Discovery</div>
+        <h2 class="hero-title" style="font-size: 2.25rem;">Health Sciences Research & Publications</h2>
+        <p class="hero-lead">Advancing evidence-based medicine through translational clinical studies, public health epidemiology, and maternal-infant health initiatives.</p>
+      </div>
     </div>
+  </section>
 
-    <!-- Non Communicable -->
-    <div class="r-card">
-      <i class="fa-solid fa-heart-pulse"></i>
-      <h3>Non-Communicable Diseases</h3>
-      <p>Diabetes, Cancer, Cardiovascular research.</p>
-      <button class="view-details" data-modal="modal2">View Details</button>
+  <!-- Research Priorities -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Key Research Themes</span>
+        <h2 class="section-title">Major Research Centers & Units</h2>
+        <p class="section-subtitle">Collaborating with national and international health bodies to solve pressing healthcare challenges in the region.</p>
+      </div>
+
+      <div class="cards-grid">
+        <div class="school-card">
+          <div class="school-icon-box"><i class="fa-solid fa-virus-covid"></i></div>
+          <h3>Infectious & Tropical Diseases</h3>
+          <p>Investigating transmission dynamics, diagnostic markers, and treatment outcomes for Tuberculosis, Malaria, HIV/AIDS, and emerging respiratory pathogens.</p>
+          <ul class="school-features">
+            <li><i class="fa-solid fa-check"></i> Drug-resistant TB Surveillance</li>
+            <li><i class="fa-solid fa-check"></i> Malaria Vector Resistance</li>
+            <li><i class="fa-solid fa-check"></i> Molecular Epidemiology Lab</li>
+          </ul>
+        </div>
+
+        <div class="school-card">
+          <div class="school-icon-box"><i class="fa-solid fa-baby"></i></div>
+          <h3>Maternal, Neonatal & Child Health</h3>
+          <p>Conducting community cohort studies to reduce maternal mortality, evaluate neonatal resuscitation protocols, and improve infant nutritional interventions.</p>
+          <ul class="school-features">
+            <li><i class="fa-solid fa-check"></i> Harar Health & Demographic Surveillance</li>
+            <li><i class="fa-solid fa-check"></i> Kangaroo Mother Care Outcomes</li>
+            <li><i class="fa-solid fa-check"></i> Child Nutrition & Stunting Studies</li>
+          </ul>
+        </div>
+
+        <div class="school-card">
+          <div class="school-icon-box"><i class="fa-solid fa-pills"></i></div>
+          <h3>Antimicrobial Resistance & Pharmacology</h3>
+          <p>Monitoring hospital-wide antibiotic utilization, tracking multidrug-resistant bacterial strains, and discovering active phytomedicinal compounds.</p>
+          <ul class="school-features">
+            <li><i class="fa-solid fa-check"></i> Hospital Stewardship Programs</li>
+            <li><i class="fa-solid fa-check"></i> Ethnobotanical Drug Discovery</li>
+            <li><i class="fa-solid fa-check"></i> Pharmacovigilance Network</li>
+          </ul>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <!-- Maternal -->
-    <div class="r-card">
-      <i class="fa-solid fa-baby"></i>
-      <h3>Maternal & Child Health</h3>
-      <p>Maternal mortality, child nutrition research.</p>
-      <button class="view-details" data-modal="modal3">View Details</button>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 Haramaya University College of Health and Medical Sciences.</p>
+        <p><a href="home.html" style="color: var(--accent-teal);">Back to Home</a></p>
+      </div>
     </div>
+  </footer>
 
-  </div>
-</section>
+  <script>
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mainNav = document.getElementById('mainNav');
+    if (mobileMenuBtn && mainNav) {
+      mobileMenuBtn.addEventListener('click', () => {
+        mainNav.classList.toggle('open');
+      });
+    }
+  </script>
 
-<section class="projects">
-  <h2>Current Research Projects</h2>
-
-  <div class="project-list">
-    <div class="project">
-      <h3>Reducing Child Malnutrition in Eastern Ethiopia</h3>
-      <p>Field study in rural districts to identify causes of malnutrition and test community-based solutions.</p>
-    </div>
-    
-    <div class="project">
-      <h3>Impact of HPV Vaccination Program</h3>
-      <p>Long-term study to measure effectiveness and awareness of HPV vaccination.</p>
-    </div>
-
-    <div class="project">
-      <h3>AI-assisted Malaria Diagnosis</h3>
-      <p>Developing machine learning models for early detection of malaria using microscopy images.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ========== FOOTER ========== -->
-
-<footer class="site-footer">
-  <div class="footer-inner">
-
-    <div class="social-links">
-      <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-      <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-      <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-      <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-    </div>
-    
-    <p class="footer-copy">
-      © <span id="year"></span> Health Campus – Advancing medical education & community health.
-    </p>
-
-    <p class="developer">
-      Developed by <strong>Gemachis T.</strong>
-    </p>
-
-  </div>
-</footer>
-
-<!-- ===== MODALS ===== -->
-
-<div id="modal1" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <h2>Communicable Diseases</h2>
-    <p>
-      Our communicable disease research focuses on tuberculosis, malaria, HIV,
-      and emerging viral diseases, working with local hospitals and communities.
-    </p>
-  </div>
-</div>
-
-<div id="modal2" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <h2>Non-Communicable Diseases</h2>
-    <p>
-      Projects include diabetes management, cancer early detection, and
-      cardiovascular risk analysis in Eastern Ethiopia.
-    </p>
-  </div>
-</div>
-
-<div id="modal3" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <h2>Maternal & Child Health</h2>
-    <p>
-      Research on maternal mortality reduction, infant nutrition, and
-      community intervention programs.
-    </p>
-  </div>
-</div>
-
-<script src="../js/research.js"></script>
 </body>
 </html>

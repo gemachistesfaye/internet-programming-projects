@@ -3,172 +3,129 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About | Haramaya Health Campus</title>
-  <link rel="stylesheet" href="../css/about.css">
+  <title>About Us | Haramaya Health Campus</title>
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-
 <body>
 
-    
-<!-- ========== TOP BAR ========== -->
-<header class="topbar">
-  <!-- Logo -->
-  <a class="logo-box" href="home.html">
-    <img class="logo-img" src="../images/logo.png" alt="Haramaya Health Campus Logo">
-    <div class="logo-info">
-      <h3>Haramaya Health Campus</h3>
-      <span>Harar — Ethiopia</span>
-    </div>
-  </a>
-
-  <!-- Contact -->
-  <div class="top-contact">
-    <span class="top-item"><i class="fa-solid fa-location-dot"></i> Harar</span>
-    <span class="top-item"><i class="fa-solid fa-phone"></i> +251 XXX XXX</span>
-    <span class="top-item"><i class="fa-solid fa-envelope"></i> info@haramaya.edu</span>
-  </div>
-
-  <!-- Actions -->
-  <div class="top-actions">
-    <div class="search-top">
-      <input id="searchInput" type="search" placeholder="Search courses..." />
-      <button id="searchBtn"><i class="fa fa-search"></i></button>
-    </div>
-
-    <button id="theme-toggle" class="icon-circle">
-      <i id="theme-icon" class="fa-solid fa-sun"></i>
-    </button>
-
-    <button id="hamburger" class="hamburger">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</header>
-
-
-<!-- ========== MAIN NAV ========== -->
-<nav class="main-nav container">
-  <ul class="menu left" id="menu-left">
-    <li><a class="active" href="home.html">Home</a></li>
-    <li><a href="courses.html">Courses</a></li>
-  </ul>
-
-  <ul class="menu right" id="menu-right">
-    <li><a href="research.html">Health Research</a></li>
-    <li><a href="about.html">About</a></li>
-  </ul>
-</nav>
-
-<!-- HERO -->
-<section class="hero-about">
-  <h1>About <span>Haramaya Health Campus</span></h1>
-  <p>Building health leaders through research, education, and community service in Harar.</p>
-</section>
-
-<!-- IMPACT NUMBERS -->
-<section class="impact-section">
-  <div class="impact-grid">
-    <div class="impact-box">
-      <h2 class="counter" data-count="2200">0</h2>
-      <p>Graduates</p>
-    </div>
-    <div class="impact-box">
-      <h2 class="counter" data-count="18">0</h2>
-      <p>Ongoing Research</p>
-    </div>
-    <div class="impact-box">
-      <h2 class="counter" data-count="65">0</h2>
-      <p>Faculty Staff</p>
-    </div>
-    <div class="impact-box">
-      <h2 class="counter" data-count="12">0</h2>
-      <p>International Projects</p>
+  <!-- Top Utility Bar -->
+  <div class="top-utility">
+    <div class="container top-utility-inner">
+      <div class="utility-contact">
+        <span class="utility-item"><i class="fa-solid fa-location-dot"></i> Harar Campus, Ethiopia</span>
+        <span class="utility-item"><i class="fa-solid fa-phone"></i> +251 25 666 0612</span>
+        <span class="utility-item"><i class="fa-solid fa-envelope"></i> contact@haramaya.edu.et</span>
+      </div>
+      <div class="utility-links">
+        <a href="home.html" class="utility-link">Home</a>
+        <a href="courses.html" class="utility-link">Academics</a>
+        <a href="research.html" class="utility-link">Research</a>
+        <a href="../docs/haramaya-brochure.pdf" class="utility-link" download><i class="fa-solid fa-file-pdf"></i> Brochure</a>
+      </div>
     </div>
   </div>
-</section>
 
-<!-- HISTORY -->
-<section class="about-story">
-  <h2>Who We Are</h2>
-  <p>
-    Haramaya Health Campus is a community-focused medical education center located in Harar, Ethiopia.
-    We work to solve real health challenges through evidence-based research, hands-on training,
-    and strong collaboration with local hospitals.
-  </p>
-</section>
+  <!-- Main Navigation Header -->
+  <header class="main-header">
+    <div class="container header-inner">
+      <a href="home.html" class="brand-box">
+        <img src="../images/logo.png" alt="Haramaya University Crest" class="brand-logo">
+        <div class="brand-text">
+          <h1>Haramaya University</h1>
+          <span>College of Health & Medical Sciences</span>
+        </div>
+      </a>
 
-<!-- TEAM -->
-<section class="team-section">
-  <h2>Leadership</h2>
+      <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
 
-  <div class="team-grid">
-    
-    <div class="team-card" data-member="director">
-      <img src="../images/director.jpg" alt="">
-      <h3>Dr. Said Mohammed</h3>
-      <p>Campus Director</p>
+      <nav class="main-nav" id="mainNav">
+        <a href="home.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link active">About Us</a>
+        <a href="courses.html" class="nav-link">Programs & Courses</a>
+        <a href="research.html" class="nav-link">Research</a>
+        <a href="home.html#campus-map" class="nav-link">Campus Map</a>
+        <a href="courses.html" class="nav-btn"><i class="fa-solid fa-graduation-cap"></i> Apply Now</a>
+      </nav>
     </div>
+  </header>
 
-    <div class="team-card" data-member="research">
-      <img src="../images/research-lead.jpg" alt="">
-      <h3>Dr. Hana Kebede</h3>
-      <p>Research Lead</p>
+  <!-- Page Banner -->
+  <section class="hero-section" style="padding: 3.5rem 0 4rem;">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-pill"><i class="fa-solid fa-landmark"></i> Institutional Profile</div>
+        <h2 class="hero-title" style="font-size: 2.25rem;">Pioneering Healthcare Education & Patient Care</h2>
+        <p class="hero-lead">Established in 1996, the College of Health and Medical Sciences in Harar has grown into one of Ethiopia's premier medical training centers.</p>
+      </div>
     </div>
+  </section>
 
-    <div class="team-card" data-member="training">
-      <img src="../images/training.jpg" alt="">
-      <h3>Dr. Abdulahi Yusuf</h3>
-      <p>Training Coordinator</p>
+  <!-- Content Section -->
+  <section class="section">
+    <div class="container">
+      <div class="hospital-feature" style="margin-bottom: 3rem;">
+        <div class="hospital-content">
+          <span class="section-tag">Our Vision & Mission</span>
+          <h3 style="font-size: 1.6rem;">Dedicated to Medical Rigor and Community Service</h3>
+          <p>Our mission is to improve human health through high-standard medical education, compassionate clinical practice, problem-solving biomedical research, and active community outreach across the Horn of Africa.</p>
+          <ul class="school-features" style="border: none; padding: 0;">
+            <li><i class="fa-solid fa-check"></i> <strong>Excellence:</strong> Maintaining international standards in healthcare training.</li>
+            <li><i class="fa-solid fa-check"></i> <strong>Compassion:</strong> Putting patient dignity at the core of all clinical practice.</li>
+            <li><i class="fa-solid fa-check"></i> <strong>Integrity:</strong> Upholding the highest ethical scientific and clinical standards.</li>
+          </ul>
+        </div>
+        <img src="../images/b.jpg" alt="Campus Facilities" class="hospital-img">
+      </div>
+
+      <!-- Campus Leadership -->
+      <div class="section-header" style="margin-top: 4rem;">
+        <span class="section-tag">Campus Administration</span>
+        <h2 class="section-title">Leadership & Governance</h2>
+        <p class="section-subtitle">Guided by distinguished medical educators, clinicians, and researchers dedicated to institutional growth.</p>
+      </div>
+
+      <div class="cards-grid">
+        <div class="school-card">
+          <div class="school-icon-box"><i class="fa-solid fa-user-tie"></i></div>
+          <h3>Chief Executive Director / Dean</h3>
+          <p>Oversees strategic academic planning, university teaching hospital integration, accreditation standards, and international medical collaborations.</p>
+        </div>
+        <div class="school-card">
+          <div class="school-icon-box"><i class="fa-solid fa-graduation-cap"></i></div>
+          <h3>Academic & Research Affairs</h3>
+          <p>Leads undergraduate and postgraduate curriculum design, faculty development, ethical review board (IRB), and clinical training standards.</p>
+        </div>
+        <div class="school-card">
+          <div class="school-icon-box"><i class="fa-solid fa-hospital-user"></i></div>
+          <h3>Clinical Hospital Administration</h3>
+          <p>Directs the operations of Hiwot Fana Comprehensive Specialized Hospital, clinical quality assurance, residency programs, and patient care.</p>
+        </div>
+      </div>
     </div>
+  </section>
 
-  </div>
-</section>
-
-<!-- BROCHURE -->
-<section class="brochure">
-  <h2>Campus Brochure</h2>
-  <p>Download full informational brochure of programs, research, and facilities.</p>
-  <a href="../docs/haramaya-brochure.pdf" class="btn-download" download>
-    <i class="fa-solid fa-file-pdf"></i> Download PDF
-  </a>
-</section>
-
-<!-- ========== FOOTER ========== -->
-
-<footer class="site-footer">
-  <div class="footer-inner">
-
-    <div class="social-links">
-      <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-      <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-      <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-      <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 Haramaya University College of Health and Medical Sciences.</p>
+        <p><a href="home.html" style="color: var(--accent-teal);">Back to Home</a></p>
+      </div>
     </div>
-    
-    <p class="footer-copy">
-      © <span id="year"></span> Health Campus – Advancing medical education & community health.
-    </p>
+  </footer>
 
-    <p class="developer">
-      Developed by <strong>Gemachis T.</strong>
-    </p>
+  <script>
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mainNav = document.getElementById('mainNav');
+    if (mobileMenuBtn && mainNav) {
+      mobileMenuBtn.addEventListener('click', () => {
+        mainNav.classList.toggle('open');
+      });
+    }
+  </script>
 
-  </div>
-</footer>
-
-<!-- POPUP -->
-<div class="modal" id="memberPopup">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <img id="mImage">
-    <h3 id="mName"></h3>
-    <p id="mRole"></p>
-    <p id="mBio"></p>
-  </div>
-</div>
-
-<script src="../js/about.js"></script>
 </body>
 </html>

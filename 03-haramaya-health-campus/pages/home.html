@@ -1,205 +1,319 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Haramaya Health Campus — Home</title>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Haramaya University | College of Health and Medical Sciences</title>
   <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" 
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
-    
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
-<!-- ========== TOP BAR ========== -->
-<header class="topbar">
-  <!-- Logo -->
-  <a class="logo-box" href="home.html">
-    <img class="logo-img" src="../images/logo.png" alt="Haramaya Health Campus Logo">
-    <div class="logo-info">
-      <h3>Haramaya Health Campus</h3>
-      <span>Harar — Ethiopia</span>
+  <!-- Top Utility Bar -->
+  <div class="top-utility">
+    <div class="container top-utility-inner">
+      <div class="utility-contact">
+        <span class="utility-item"><i class="fa-solid fa-location-dot"></i> Harar Campus, Ethiopia</span>
+        <span class="utility-item"><i class="fa-solid fa-phone"></i> +251 25 666 0612</span>
+        <span class="utility-item"><i class="fa-solid fa-envelope"></i> contact@haramaya.edu.et</span>
+      </div>
+      <div class="utility-links">
+        <a href="about.html" class="utility-link">About Campus</a>
+        <a href="courses.html" class="utility-link">Academics</a>
+        <a href="research.html" class="utility-link">Research</a>
+        <a href="../docs/haramaya-brochure.pdf" class="utility-link" download><i class="fa-solid fa-file-pdf"></i> Brochure</a>
+      </div>
     </div>
-  </a>
-
-  <!-- Contact -->
-  <div class="top-contact">
-    <span class="top-item"><i class="fa-solid fa-location-dot"></i> Harar</span>
-    <span class="top-item"><i class="fa-solid fa-phone"></i> +251 XXX XXX</span>
-    <span class="top-item"><i class="fa-solid fa-envelope"></i> info@haramaya.edu</span>
   </div>
 
-  <!-- Actions -->
-  <div class="top-actions">
-    <div class="search-top">
-      <input id="searchInput" type="search" placeholder="Search courses..." />
-      <button id="searchBtn"><i class="fa fa-search"></i></button>
-    </div>
+  <!-- Main Navigation Header -->
+  <header class="main-header">
+    <div class="container header-inner">
+      <a href="home.html" class="brand-box">
+        <img src="../images/logo.png" alt="Haramaya University Crest" class="brand-logo">
+        <div class="brand-text">
+          <h1>Haramaya University</h1>
+          <span>College of Health & Medical Sciences</span>
+        </div>
+      </a>
 
-    <button id="theme-toggle" class="icon-circle">
-      <i id="theme-icon" class="fa-solid fa-sun"></i>
-    </button>
-
-    <button id="hamburger" class="hamburger">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</header>
-
-
-<!-- ========== MAIN NAV ========== -->
-<nav class="main-nav container">
-  <ul class="menu left" id="menu-left">
-    <li><a class="active" href="home.html">Home</a></li>
-    <li><a href="courses.html">Courses</a></li>
-  </ul>
-
-  <ul class="menu right" id="menu-right">
-    <li><a href="research.html">Health Research</a></li>
-    <li><a href="about.html">About</a></li>
-  </ul>
-</nav>
-
-
-<!-- ========== HERO SECTION ========== -->
-<section class="banner">
-  <div class="banner-inner container">
-    <h1>
-      Preparing <span class="accent">health</span> talent 
-      for global medical careers
-    </h1>
-    <p>
-      Hands-on training, research, and modern facilities 
-      at Haramaya Health Campus in Harar, Ethiopia.
-    </p>
-
-    <div class="hero-actions">
-      <a class="btn primary" href="courses.html">Explore Courses</a>
-      <button id="tourBtn" class="btn ghost">
-        <i class="fa-solid fa-circle-play"></i> Watch Campus Tour
+      <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars"></i>
       </button>
+
+      <nav class="main-nav" id="mainNav">
+        <a href="home.html" class="nav-link active">Home</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="courses.html" class="nav-link">Programs & Courses</a>
+        <a href="research.html" class="nav-link">Research</a>
+        <a href="#campus-map" class="nav-link">Campus Map</a>
+        <a href="courses.html" class="nav-btn"><i class="fa-solid fa-graduation-cap"></i> Apply Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-pill">
+          <i class="fa-solid fa-award"></i> Leading Medical Education in Eastern Ethiopia
+        </div>
+        <h2 class="hero-title">Shaping the Future of Healthcare & Clinical Excellence</h2>
+        <p class="hero-lead">Committed to producing highly competent, compassionate healthcare professionals and advancing biomedical research through our state-of-the-art teaching facilities and specialized hospital.</p>
+        <div class="hero-actions">
+          <a href="courses.html" class="btn-primary">
+            Explore Programs <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="#campus-map" class="btn-outline">
+            <i class="fa-solid fa-map-location-dot"></i> View Campus Map
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Ribbon -->
+  <div class="container">
+    <div class="stats-ribbon">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <h3>4,500+</h3>
+          <p>Enrolled Students</p>
+        </div>
+        <div class="stat-item">
+          <h3>280+</h3>
+          <p>Specialized Faculty</p>
+        </div>
+        <div class="stat-item">
+          <h3>800+</h3>
+          <p>Hospital Teaching Beds</p>
+        </div>
+        <div class="stat-item">
+          <h3>50+</h3>
+          <p>Active Research Grants</p>
+        </div>
+      </div>
     </div>
   </div>
-</section>
 
+  <!-- Academic Schools Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Academic Excellence</span>
+        <h2 class="section-title">Schools & Academic Divisions</h2>
+        <p class="section-subtitle">Delivering accredited undergraduate and postgraduate curricula designed around clinical rigor and community health.</p>
+      </div>
 
-<!-- ========== POPULAR COURSES ========== -->
-<section class="popular container">
-  <h2>Popular Programs</h2>
+      <div class="cards-grid">
+        <!-- School 1 -->
+        <article class="school-card">
+          <div class="school-icon-box">
+            <i class="fa-solid fa-user-doctor"></i>
+          </div>
+          <h3>School of Medicine</h3>
+          <p>Comprehensive training in General Medicine, Surgery, Internal Medicine, Pediatrics, and advanced clinical specialty residencies.</p>
+          <ul class="school-features">
+            <li><i class="fa-solid fa-check"></i> Doctor of Medicine (MD)</li>
+            <li><i class="fa-solid fa-check"></i> Clinical Specialty Residencies</li>
+            <li><i class="fa-solid fa-check"></i> Hospital-grounded rotations</li>
+          </ul>
+          <a href="courses.html#medicine" class="card-link">View Degree Curricula <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
 
-  <div class="courses-grid" id="index-courses">
+        <!-- School 2 -->
+        <article class="school-card">
+          <div class="school-icon-box">
+            <i class="fa-solid fa-prescription-bottle-medical"></i>
+          </div>
+          <h3>School of Pharmacy</h3>
+          <p>Educating pharmaceutical specialists in clinical pharmacy, pharmacology, industrial production, and medication therapy management.</p>
+          <ul class="school-features">
+            <li><i class="fa-solid fa-check"></i> Bachelor of Pharmacy (B.Pharm)</li>
+            <li><i class="fa-solid fa-check"></i> MSc in Clinical Pharmacy</li>
+            <li><i class="fa-solid fa-check"></i> Advanced Pharmacology Labs</li>
+          </ul>
+          <a href="courses.html#pharmacy" class="card-link">View Degree Curricula <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
 
-    <article class="course-card">
-      <img src="../assets/images/medicine.jpg" alt="Medicine">
-      <h3>Medicine (MD)</h3>
-      <p>Comprehensive medical curriculum with clinical rotations and internships.</p>
-      <a class="btn small" href="courses.html#medicine">View</a>
-    </article>
+        <!-- School 3 -->
+        <article class="school-card">
+          <div class="school-icon-box">
+            <i class="fa-solid fa-heart-pulse"></i>
+          </div>
+          <h3>School of Public Health</h3>
+          <p>Pioneering epidemiological surveillance, community maternal-child health interventions, and biostatistical field research.</p>
+          <ul class="school-features">
+            <li><i class="fa-solid fa-check"></i> BSc in Public Health Officer</li>
+            <li><i class="fa-solid fa-check"></i> Master of Public Health (MPH)</li>
+            <li><i class="fa-solid fa-check"></i> Field Epidemiological Training</li>
+          </ul>
+          <a href="courses.html#public-health" class="card-link">View Degree Curricula <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
 
-    <article class="course-card">
-      <img src="../assets/images/pharmacy.jpg" alt="Pharmacy">
-      <h3>Pharmacy (BPharm)</h3>
-      <p>Pharmaceutical sciences, pharmacology, and community pharmacy practice.</p>
-      <a class="btn small" href="courses.html#pharmacy">View</a>
-    </article>
+        <!-- School 4 -->
+        <article class="school-card">
+          <div class="school-icon-box">
+            <i class="fa-solid fa-user-nurse"></i>
+          </div>
+          <h3>School of Nursing & Midwifery</h3>
+          <p>Preparing skilled clinical nurses, emergency care specialists, and certified nurse midwives serving diverse hospital wards.</p>
+          <ul class="school-features">
+            <li><i class="fa-solid fa-check"></i> BSc in Comprehensive Nursing</li>
+            <li><i class="fa-solid fa-check"></i> BSc in Clinical Midwifery</li>
+            <li><i class="fa-solid fa-check"></i> Critical Care & ICU Rotations</li>
+          </ul>
+          <a href="courses.html#nursing" class="card-link">View Degree Curricula <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
 
-    <article class="course-card">
-      <img src="../assets/images/public-health.jpg" alt="Public Health">
-      <h3>Public Health (BSc)</h3>
-      <p>Epidemiology, health systems, and community programs.</p>
-      <a class="btn small" href="courses.html#public-health">View</a>
-    </article>
+        <!-- School 5 -->
+        <article class="school-card">
+          <div class="school-icon-box">
+            <i class="fa-solid fa-microscope"></i>
+          </div>
+          <h3>Medical Laboratory Sciences</h3>
+          <p>Training diagnostic technologists across hematology, clinical chemistry, medical microbiology, immunology, and histology.</p>
+          <ul class="school-features">
+            <li><i class="fa-solid fa-check"></i> BSc in Medical Laboratory</li>
+            <li><i class="fa-solid fa-check"></i> Molecular Diagnostic Training</li>
+            <li><i class="fa-solid fa-check"></i> National Accredited Labs</li>
+          </ul>
+          <a href="courses.html#med-lab" class="card-link">View Degree Curricula <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
 
-  </div>
-</section>
-
-
-<!-- ========== CAMPUS LIFE ========== -->
-<section class="campus container">
-  <h2>Campus Life</h2>
-  <p>Explore modern labs, medical library, and student clinic facilities.</p>
-
-  <div class="campus-grid">
-    <div class="card">
-      <img src="../assets/images/lab.jpg" alt="Lab">
-      <h4>Advanced Labs</h4>
+        <!-- School 6 -->
+        <article class="school-card">
+          <div class="school-icon-box">
+            <i class="fa-solid fa-dna"></i>
+          </div>
+          <h3>Biomedical & Clinical Research</h3>
+          <p>Spearheading vital research into infectious diseases, antimicrobial resistance, malnutrition, and maternal-infant health.</p>
+          <ul class="school-features">
+            <li><i class="fa-solid fa-check"></i> International Research Partnerships</li>
+            <li><i class="fa-solid fa-check"></i> Peer-Reviewed Publications</li>
+            <li><i class="fa-solid fa-check"></i> Ethical Review Committee (IRB)</li>
+          </ul>
+          <a href="research.html" class="card-link">Discover Active Projects <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
+      </div>
     </div>
+  </section>
 
-    <div class="card">
-      <img src="../assets/images/library.jpg" alt="Library">
-      <h4>Medical Library</h4>
+  <!-- Hospital Clinical Training Feature -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="hospital-feature">
+        <img src="../images/hero.jpg" alt="Hiwot Fana Teaching Hospital" class="hospital-img">
+        <div class="hospital-content">
+          <span class="section-tag">Clinical Practice Ground</span>
+          <h3>Hiwot Fana Comprehensive Specialized Hospital</h3>
+          <p>Our premier 800-bed university teaching hospital provides tertiary medical services to over 5 million people across Eastern Ethiopia, offering our medical students unmatched hands-on clinical exposure from year one.</p>
+          <ul class="school-features" style="border: none; padding: 0;">
+            <li><i class="fa-solid fa-check"></i> 24/7 Emergency & Critical Care Center</li>
+            <li><i class="fa-solid fa-check"></i> Modern Surgical Theaters & Intensive Care</li>
+            <li><i class="fa-solid fa-check"></i> Specialized Oncology & Maternal Care Units</li>
+          </ul>
+          <div style="margin-top: 1.5rem;">
+            <a href="about.html" class="btn-primary" style="display: inline-flex;">Learn More About the Hospital</a>
+          </div>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <div class="card">
-      <img src="../assets/images/clinic.jpg" alt="Clinic">
-      <h4>Training Clinic</h4>
+  <!-- Campus Facility Map Section -->
+  <section class="section" id="campus-map">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Navigation & Facilities</span>
+        <h2 class="section-title">Harar Campus Facility Guide</h2>
+        <p class="section-subtitle">Located in historical Harar city, our campus integrates lecture amphitheaters, simulation laboratories, hostels, and dining amenities.</p>
+      </div>
+
+      <div class="map-card">
+        <div class="map-img-box">
+          <img src="../map.png" alt="Haramaya Health Campus Map Layout">
+        </div>
+        <div>
+          <h3 style="font-size: 1.5rem; font-weight: 800; color: var(--primary-navy); margin-bottom: 1rem;">Main Campus Landmarks</h3>
+          <p style="color: var(--text-secondary); margin-bottom: 1.25rem;">Our campus is designed for seamless academic transition between lecture halls and hospital clinics.</p>
+          <ul class="school-features" style="border: none; padding: 0; line-height: 2;">
+            <li><i class="fa-solid fa-building-columns"></i> <strong>Block A & B:</strong> Main Administrative & Dean's Offices</li>
+            <li><i class="fa-solid fa-stethoscope"></i> <strong>Block C:</strong> Clinical Skills Demonstration & Simulation Center</li>
+            <li><i class="fa-solid fa-flask-vial"></i> <strong>Block D:</strong> Pharmacology & Microbiology Research Labs</li>
+            <li><i class="fa-solid fa-book-bookmark"></i> <strong>Central Library:</strong> 24-Hour Medical Reference Center</li>
+            <li><i class="fa-solid fa-bed"></i> <strong>Student Hostels:</strong> Male & Female Resident Quarters</li>
+          </ul>
+          <div style="margin-top: 1.5rem;">
+            <a href="../map.png" target="_blank" class="btn-primary" style="display: inline-flex;">
+              <i class="fa-solid fa-up-right-from-square"></i> Open High-Resolution Map
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4>Haramaya University</h4>
+          <p>College of Health and Medical Sciences dedicated to human resource development in medicine, healthcare service delivery, and innovative health sciences discovery.</p>
+          <p style="font-size: 0.8rem; color: rgba(255,255,255,0.5);">P.O. Box 235, Harar, Ethiopia</p>
+        </div>
 
-<!-- ========== HEALTH RESEARCH FEATURE ========== -->
-<section class="research container">
-  <h2>Health Research</h2>
-  <p>
-    Our research programs focus on public health, infectious disease studies, 
-    and improving community outcomes in Eastern Ethiopia.
-  </p>
+        <div class="footer-col">
+          <h5>Academics</h5>
+          <ul class="footer-links">
+            <li><a href="courses.html#medicine">Medicine (MD)</a></li>
+            <li><a href="courses.html#pharmacy">Pharmacy (B.Pharm)</a></li>
+            <li><a href="courses.html#public-health">Public Health (MPH)</a></li>
+            <li><a href="courses.html#nursing">Nursing & Midwifery</a></li>
+            <li><a href="courses.html#med-lab">Laboratory Sciences</a></li>
+          </ul>
+        </div>
 
-  <a class="btn primary" href="research.html">Explore Research</a>
-</section>
+        <div class="footer-col">
+          <h5>Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About Campus</a></li>
+            <li><a href="research.html">Research Publications</a></li>
+            <li><a href="#campus-map">Campus Map</a></li>
+            <li><a href="../docs/haramaya-brochure.pdf" download>Download Brochure</a></li>
+          </ul>
+        </div>
 
+        <div class="footer-col">
+          <h5>Emergency & Inquiries</h5>
+          <ul class="footer-links">
+            <li><span style="color: rgba(255,255,255,0.6);">Hospital Helpline:</span><br><strong>+251 25 666 0612</strong></li>
+            <li style="margin-top: 0.5rem;"><span style="color: rgba(255,255,255,0.6);">Dean's Office:</span><br><strong>+251 25 666 1863</strong></li>
+            <li style="margin-top: 0.5rem;"><span style="color: rgba(255,255,255,0.6);">Email:</span><br><strong>contact@haramaya.edu.et</strong></li>
+          </ul>
+        </div>
+      </div>
 
-<!-- ========== FOOTER ========== -->
-
-<footer class="site-footer">
-  <div class="footer-inner">
-
-    <div class="social-links">
-      <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-      <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-      <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-      <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Haramaya University College of Health and Medical Sciences. All Rights Reserved.</p>
+        <p>Developed for Web & Internet Programming Showcase</p>
+      </div>
     </div>
-    
-    <p class="footer-copy">
-      © <span id="year"></span> Health Campus – Advancing medical education & community health.
-    </p>
+  </footer>
 
-    <p class="developer">
-      Developed by <strong>Gemachis T.</strong>
-    </p>
-
-  </div>
-</footer>
-
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
-
-
-
-
-<!-- ========== VIDEO POPUP ========== -->
-<div id="videoPopup" class="video-popup" aria-hidden="true">
-  <div class="video-wrap" role="dialog" aria-modal="true">
-    <button id="closeVideo" class="video-close">&times;</button>
-    <iframe id="tourVideo" src="" frameborder="0" allowfullscreen></iframe>
-  </div>
-</div>
-
-
-<!-- ========== COURSE POPUP ========== -->
-<div id="coursePopup" class="course-popup">
-  <div class="popup-box">
-    <button id="popupClose" class="close-btn">✕</button>
-    <div id="popupContent"></div>
-  </div>
-</div>
-
-<script src="../js/script.js" defer></script>
+  <script>
+    // Responsive Navbar toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mainNav = document.getElementById('mainNav');
+    if (mobileMenuBtn && mainNav) {
+      mobileMenuBtn.addEventListener('click', () => {
+        mainNav.classList.toggle('open');
+      });
+    }
+  </script>
 
 </body>
 </html>
