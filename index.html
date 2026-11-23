@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Internet Programming & Web Development Portfolio | Gemachis Tesfaye</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --surface: #ffffff;
+      --bg: #f8fafc;
+      --text: #0f172a;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --radius: 16px;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 0 1rem 4rem;
+    }
+    header {
+      max-width: 1040px;
+      margin: 4rem auto 3rem;
+      text-align: center;
+    }
+    .badge {
+      display: inline-block;
+      padding: 0.35rem 0.85rem;
+      border-radius: 9999px;
+      background: #eff6ff;
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 1rem;
+      border: 1px solid #dbeafe;
+    }
+    h1 {
+      font-size: 2.75rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: #0f172a;
+      margin-bottom: 0.75rem;
+      line-height: 1.2;
+    }
+    p.lead {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      max-width: 650px;
+      margin: 0 auto;
+    }
+    .grid {
+      max-width: 1040px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+      gap: 1.75rem;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.2s ease-in-out;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px -10px rgba(0,0,0,0.1);
+      border-color: #cbd5e1;
+    }
+    .card-tag {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.5rem;
+    }
+    .card h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      color: #0f172a;
+    }
+    .card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+      flex-grow: 1;
+    }
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-bottom: 1.5rem;
+    }
+    .tag {
+      font-size: 0.75rem;
+      padding: 0.2rem 0.55rem;
+      background: #f1f5f9;
+      color: #475569;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.25rem;
+      background: var(--primary);
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      border-radius: 10px;
+      transition: background 0.15s ease;
+      width: 100%;
+    }
+    .btn:hover {
+      background: var(--primary-dark);
+    }
+    .btn-secondary {
+      background: #f8fafc;
+      color: #334155;
+      border: 1px solid var(--border);
+      margin-top: 0.5rem;
+    }
+    .btn-secondary:hover {
+      background: #f1f5f9;
+    }
+    footer {
+      max-width: 1040px;
+      margin: 4rem auto 0;
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border);
+      padding-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="badge">Live Showcase Portfolio</div>
+    <h1>Internet Programming & Web Projects</h1>
+    <p class="lead">Explore interactive web applications, frontend labs, and campus portals developed with HTML5, CSS3, and JavaScript.</p>
+  </header>
+
+  <main class="grid">
+
+    <!-- Card 1: Haramaya Health Campus -->
+    <article class="card">
+      <div>
+        <div class="card-tag">Campus Web Portal</div>
+        <h2>Haramaya Health Campus Website</h2>
+        <p>Comprehensive responsive website featuring campus departments, research publications, interactive course catalog, and campus map layout.</p>
+        <div class="tags">
+          <span class="tag">HTML5</span>
+          <span class="tag">CSS Grid/Flexbox</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">Responsive</span>
+        </div>
+      </div>
+      <div>
+        <a href="./03-haramaya-health-campus/pages/home.html" class="btn">
+          View Live Website &rarr;
+        </a>
+      </div>
+    </article>
+
+    <!-- Card 2: IP Project & Student Portal -->
+    <article class="card">
+      <div>
+        <div class="card-tag">Full-Stack Project</div>
+        <h2>IP Project & Student Portal</h2>
+        <p>Interactive student registration system, modern landing page, login interface, and rich multimedia integration (video/audio).</p>
+        <div class="tags">
+          <span class="tag">Landing Page</span>
+          <span class="tag">Forms</span>
+          <span class="tag">Media Audio/Video</span>
+          <span class="tag">CSS Layout</span>
+        </div>
+      </div>
+      <div>
+        <a href="./01-ip-project/Frontend/Pages/Index.html" class="btn">
+          View Main Portal &rarr;
+        </a>
+        <a href="./01-ip-project/Frontend/Pages/landing_page.html" class="btn btn-secondary">
+          View Landing Page &rarr;
+        </a>
+      </div>
+    </article>
+
+    <!-- Card 3: Internet Programming Labs -->
+    <article class="card">
+      <div>
+        <div class="card-tag">Practice & Labs</div>
+        <h2>Web Development Practice Labs</h2>
+        <p>Collection of hands-on web development exercises covering HTML elements, CSS styling techniques, tables, layouts, and graphics.</p>
+        <div class="tags">
+          <span class="tag">HTML Labs</span>
+          <span class="tag">CSS Practice</span>
+          <span class="tag">Table Layouts</span>
+          <span class="tag">Graphics</span>
+        </div>
+      </div>
+      <div>
+        <a href="./02-ip-practice/Frontend/Pages/Index.html" class="btn">
+          Explore Practice Labs &rarr;
+        </a>
+      </div>
+    </article>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Gemachis Tesfaye. Deployed with GitHub Pages.</p>
+  </footer>
+
+</body>
+</html>
